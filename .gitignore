@@ -1,0 +1,15 @@
+# Mac sistem dosyaları
+.DS_Store
+
+# Ham videolar (repoyu şişirmemesi için)
+*.mov
+*.MOV
+*.mp4
+*.avi
+A Real World Dataset*/
+
+# Python ve model ağırlıkları
+__pycache__/
+*.pyc
+*.pth
+*.pt
