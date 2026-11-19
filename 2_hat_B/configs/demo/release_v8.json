@@ -1,0 +1,53 @@
+{
+  "release": "demo-v8",
+  "model_selection": "Frozen for demo; training-only 3-fold grouped CV among 18 fixed candidates per target",
+  "visual_detection": {
+    "primary": "YOLOv8s",
+    "rescue": "YOLOv8m",
+    "crowd_override": "Explicit YOLOv8m 960 mode for IMG_5532",
+    "pose": "DeepLabCut SuperAnimal Quadruped RTMPose-S, 39 keypoints",
+    "limits": "Detection/pose quality not benchmarked; partial views and multi-dog identity remain unresolved"
+  },
+  "audio_events": {
+    "name": "YAMNet",
+    "implementation": "Inference-only PyTorch port of official HDF5",
+    "weights_sha256": "13c3308955bbfaef262f175ac9c40e47b134573a93984f009220dd7cc12a1744",
+    "window_seconds": 0.975,
+    "hop_seconds": 0.48,
+    "candidate_threshold": 0.3,
+    "limits": "Mixed recording; no source separation or attribution to individual dogs. Scores are not calibrated probabilities. No temporal ground-truth evaluation."
+  },
+  "behavior_models": {
+    "aktivite": "random_forest / fusion",
+    "vucut": "random_forest / fusion",
+    "durus": "logistic / fusion_events",
+    "kuyruk": "random_forest / fusion_events",
+    "kulak": "random_forest / events"
+  },
+  "behavior_bundle": "results/demo_v7/models.joblib",
+  "behavior_bundle_sha256": "4ee321000f79ea7eae4fcad11fcb396289379e8d81706e53ab35d65f7752cacc",
+  "environment": {
+    "python": "3.11.17",
+    "scikit_learn": "1.9.1"
+  },
+  "temporal_behavior": {
+    "window_seconds": 4,
+    "hop_seconds": 2,
+    "max_seconds": 60,
+    "min_seconds": 1,
+    "scope": "Cached pose sequence at approximately 2fps; largest box per frame; no identity guarantee",
+    "status": "Experimental offline inference, no temporal accuracy evaluation"
+  },
+  "emotion": {
+    "method": "Illustrative rule from video-level behavior scores",
+    "trained_emotion_model": false,
+    "accuracy_evaluated": false
+  },
+  "evaluation": {
+    "original_train": 72,
+    "original_test": 25,
+    "incomplete_excluded_from_fitting": 30,
+    "test_is_new_independent_validation": false,
+    "identity_split_available": false
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "final_copy_identical_to_v13": true,
+  "rows": 127,
+  "no_session_columns": true,
+  "no_separate_rater_columns": true,
+  "emotion_file": {
+    "rows": 127,
+    "label_counts": {
+      "Relaxed": 37,
+      "Happy": 33,
+      "Angry": 23,
+      "Sad": 22,
+      "": 12
+    },
+    "all_rule_derived": true,
+    "usable_as_independent_emotion_truth": false
+  }
+}

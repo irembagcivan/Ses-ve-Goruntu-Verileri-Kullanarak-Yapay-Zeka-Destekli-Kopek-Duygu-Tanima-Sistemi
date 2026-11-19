@@ -1,0 +1,63 @@
+{
+  "model_name": "superanimal_quadruped_rtmpose_s",
+  "framework_version": "3.0.2",
+  "checkpoint_repo": "mwmathis/DeepLabCutModelZoo-SuperAnimal-Quadruped",
+  "checkpoint_filename": "superanimal_quadruped_rtmpose_s.pt",
+  "checkpoint_sha256": null,
+  "weights_license": null,
+  "source_commit": "fa5a8c36100c85300b7d4a534deb38d7bd8b2fa8",
+  "sources": {
+    "project_config": {
+      "path": "deeplabcut/modelzoo/project_configs/superanimal_quadruped.yaml",
+      "sha256": "dac0bce73e5940a9594ca620af2c0359ca86ba1eaa258392537ec94940aa1151"
+    },
+    "model_config": {
+      "path": "deeplabcut/modelzoo/model_configs/rtmpose_s.yaml",
+      "sha256": "f2b547d694b85c6c3f3a80e3bd08a3549f5d46169937a4861902938f112abb89"
+    }
+  },
+  "metadata": {
+    "bodyparts": [
+      "nose",
+      "upper_jaw",
+      "lower_jaw",
+      "mouth_end_right",
+      "mouth_end_left",
+      "right_eye",
+      "right_earbase",
+      "right_earend",
+      "right_antler_base",
+      "right_antler_end",
+      "left_eye",
+      "left_earbase",
+      "left_earend",
+      "left_antler_base",
+      "left_antler_end",
+      "neck_base",
+      "neck_end",
+      "throat_base",
+      "throat_end",
+      "back_base",
+      "back_end",
+      "back_middle",
+      "tail_base",
+      "tail_end",
+      "front_left_thai",
+      "front_left_knee",
+      "front_left_paw",
+      "front_right_thai",
+      "front_right_knee",
+      "front_right_paw",
+      "back_left_paw",
+      "back_left_thai",
+      "back_right_thai",
+      "back_left_knee",
+      "back_right_knee",
+      "back_right_paw",
+      "belly_bottom",
+      "body_middle_right",
+      "body_middle_left"
+    ],
+    "skeleton": []
+  }
+}

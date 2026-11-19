@@ -1,0 +1,7301 @@
+{
+  "version": "labels_final-v13",
+  "targets": [
+    "hareket",
+    "ses",
+    "durus",
+    "kuyruk_konum",
+    "kuyruk_hareket",
+    "kulak"
+  ],
+  "classes": {
+    "hareket": [
+      "hareketsiz",
+      "kosuyor_oynuyor",
+      "yuruyor"
+    ],
+    "ses": [
+      "havlama",
+      "hirlama",
+      "inleme",
+      "yok"
+    ],
+    "durus": [
+      "ayakta",
+      "oturuyor",
+      "sirtustu",
+      "yatiyor"
+    ],
+    "kuyruk_konum": [
+      "asagi_bacak_arasi",
+      "notr",
+      "yukari"
+    ],
+    "kuyruk_hareket": [
+      "sallamiyor",
+      "salliyor"
+    ],
+    "kulak": [
+      "dik_one",
+      "geride_yassi",
+      "notr"
+    ]
+  },
+  "audit": {
+    "total": 127,
+    "formerly_unlabelled": 30,
+    "newly_usable_training": 27,
+    "unsafe": 11,
+    "variable_videos": 36,
+    "training_videos": 93,
+    "original_test_videos": 25,
+    "evaluable_test_videos": 23,
+    "masked_cells": [
+      {
+        "video_id": "dog1.mov",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "dog1.mov",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "dog2.mov",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "dog6.mov",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "dog11.mov",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "dog12.mov",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "dog12.mov",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "dog13.mov",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "dog14.mov",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5356.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5362.MOV",
+        "target": "hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5362.MOV",
+        "target": "ses",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5362.MOV",
+        "target": "durus",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5362.MOV",
+        "target": "kuyruk_konum",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5362.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5362.MOV",
+        "target": "kulak",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5364.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5368.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5369.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5369.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5371.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5371.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5373.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5373.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5374.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5374.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5377.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5382.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5383.MOV",
+        "target": "hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5383.MOV",
+        "target": "ses",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5383.MOV",
+        "target": "durus",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5383.MOV",
+        "target": "kuyruk_konum",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5383.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5383.MOV",
+        "target": "kulak",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5384.MOV",
+        "target": "hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5384.MOV",
+        "target": "ses",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5384.MOV",
+        "target": "durus",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5384.MOV",
+        "target": "kuyruk_konum",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5384.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5384.MOV",
+        "target": "kulak",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5386.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5387.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5388.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5389.MOV",
+        "target": "kuyruk_konum",
+        "reason": "missing_or_invisible"
+      },
+      {
+        "video_id": "IMG_5389.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "missing_or_invisible"
+      },
+      {
+        "video_id": "IMG_5396.MOV",
+        "target": "hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5396.MOV",
+        "target": "ses",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5396.MOV",
+        "target": "durus",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5396.MOV",
+        "target": "kuyruk_konum",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5396.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5396.MOV",
+        "target": "kulak",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5397.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5400.MOV",
+        "target": "hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5400.MOV",
+        "target": "ses",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5400.MOV",
+        "target": "durus",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5400.MOV",
+        "target": "kuyruk_konum",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5400.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5400.MOV",
+        "target": "kulak",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5402.MOV",
+        "target": "hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5402.MOV",
+        "target": "ses",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5402.MOV",
+        "target": "durus",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5402.MOV",
+        "target": "kuyruk_konum",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5402.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5402.MOV",
+        "target": "kulak",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5403.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5404.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5406.MOV",
+        "target": "hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5406.MOV",
+        "target": "ses",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5406.MOV",
+        "target": "durus",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5406.MOV",
+        "target": "kuyruk_konum",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5406.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5406.MOV",
+        "target": "kulak",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5412.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5415.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5416.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5418.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5495.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5496.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5498.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5522.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5522.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5524.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5525.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5526.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5528.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5528.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "missing_or_invisible"
+      },
+      {
+        "video_id": "IMG_5528.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5532.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5534.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5535.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5540.mov",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5545.mov",
+        "target": "hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5545.mov",
+        "target": "ses",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5545.mov",
+        "target": "durus",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5545.mov",
+        "target": "kuyruk_konum",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5545.mov",
+        "target": "kuyruk_hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5545.mov",
+        "target": "kulak",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5547.mov",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5550.MOV",
+        "target": "hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5550.MOV",
+        "target": "ses",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5550.MOV",
+        "target": "durus",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5550.MOV",
+        "target": "kuyruk_konum",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5550.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5550.MOV",
+        "target": "kulak",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5556.MOV",
+        "target": "kuyruk_konum",
+        "reason": "missing_or_invisible"
+      },
+      {
+        "video_id": "IMG_5556.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "missing_or_invisible"
+      },
+      {
+        "video_id": "IMG_5556.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5558.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5558.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5559.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5563.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5565.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5566.MOV",
+        "target": "hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5566.MOV",
+        "target": "ses",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5566.MOV",
+        "target": "durus",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5566.MOV",
+        "target": "kuyruk_konum",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5566.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5566.MOV",
+        "target": "kulak",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5571.MOV",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5571.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5574.mov",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5578.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5579.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5580.MOV",
+        "target": "hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5580.MOV",
+        "target": "ses",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5580.MOV",
+        "target": "durus",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5580.MOV",
+        "target": "kuyruk_konum",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5580.MOV",
+        "target": "kuyruk_hareket",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5580.MOV",
+        "target": "kulak",
+        "reason": "unsafe"
+      },
+      {
+        "video_id": "IMG_5581.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5582.mov",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5583.mov",
+        "target": "kuyruk_konum",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5583.mov",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5584.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5585.MOV",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5587.mov",
+        "target": "kulak",
+        "reason": "no_consensus"
+      },
+      {
+        "video_id": "IMG_5592.mov",
+        "target": "kulak",
+        "reason": "no_consensus"
+      }
+    ],
+    "targets": [
+      "hareket",
+      "ses",
+      "durus",
+      "kuyruk_konum",
+      "kuyruk_hareket",
+      "kulak"
+    ],
+    "classes": {
+      "hareket": [
+        "hareketsiz",
+        "kosuyor_oynuyor",
+        "yuruyor"
+      ],
+      "ses": [
+        "havlama",
+        "hirlama",
+        "inleme",
+        "yok"
+      ],
+      "durus": [
+        "ayakta",
+        "oturuyor",
+        "sirtustu",
+        "yatiyor"
+      ],
+      "kuyruk_konum": [
+        "asagi_bacak_arasi",
+        "notr",
+        "yukari"
+      ],
+      "kuyruk_hareket": [
+        "sallamiyor",
+        "salliyor"
+      ],
+      "kulak": [
+        "dik_one",
+        "geride_yassi",
+        "notr"
+      ]
+    },
+    "per_target": {
+      "hareket": {
+        "training": 93,
+        "test": 23,
+        "train_class_counts": {
+          "hareketsiz": 57,
+          "kosuyor_oynuyor": 9,
+          "yuruyor": 27
+        }
+      },
+      "ses": {
+        "training": 93,
+        "test": 23,
+        "train_class_counts": {
+          "havlama": 26,
+          "hirlama": 1,
+          "inleme": 5,
+          "yok": 61
+        }
+      },
+      "durus": {
+        "training": 93,
+        "test": 23,
+        "train_class_counts": {
+          "ayakta": 61,
+          "oturuyor": 2,
+          "sirtustu": 2,
+          "yatiyor": 28
+        }
+      },
+      "kuyruk_konum": {
+        "training": 70,
+        "test": 17,
+        "train_class_counts": {
+          "asagi_bacak_arasi": 2,
+          "notr": 27,
+          "yukari": 41
+        }
+      },
+      "kuyruk_hareket": {
+        "training": 90,
+        "test": 23,
+        "train_class_counts": {
+          "sallamiyor": 44,
+          "salliyor": 46
+        }
+      },
+      "kulak": {
+        "training": 63,
+        "test": 14,
+        "train_class_counts": {
+          "dik_one": 9,
+          "geride_yassi": 6,
+          "notr": 48
+        }
+      }
+    },
+    "source_library_id": "libfile_493a44e079cc81918ff2db14060922e2",
+    "source_access": "Full CSV text extraction; source-byte download unavailable",
+    "limits": [
+      "Behavior/sound annotations, no emotion ground truth.",
+      "Largest-box visual features may not match the annotators focal dog.",
+      "Sound labels may refer to the focal dog; YAMNet observes the mixed recording.",
+      "Video labels do not validate temporal window predictions.",
+      "Previously inspected holdout, not an independent new test; no dog identity split."
+    ],
+    "extracted_labels_sha256": "c38bde226f7c35e1e546f6f24ccfaaa5a705cdc4cd37b66dd6ecf54262eeaca9"
+  },
+  "selection": {
+    "models": {
+      "neural_visual": {
+        "epochs": 80,
+        "cv_macro_f1": 0.45816251955285137,
+        "candidates": {
+          "20": 0.3356242532086953,
+          "40": 0.37842830927600496,
+          "60": 0.4263802918100499,
+          "80": 0.45816251955285137
+        }
+      },
+      "neural_audio": {
+        "epochs": 80,
+        "cv_macro_f1": 0.46275775928638335,
+        "candidates": {
+          "20": 0.3459323397785401,
+          "40": 0.4034696424518067,
+          "60": 0.423383173582371,
+          "80": 0.46275775928638335
+        }
+      },
+      "neural_fusion": {
+        "epochs": 60,
+        "cv_macro_f1": 0.48976078421359953,
+        "candidates": {
+          "20": 0.3840528529485319,
+          "40": 0.43982860654071404,
+          "60": 0.48976078421359953,
+          "80": 0.4895670191542716
+        }
+      },
+      "sequence_cnn": {
+        "epochs": 80,
+        "cv_macro_f1": 0.4818601947441192,
+        "candidates": {
+          "20": 0.35614389160028126,
+          "40": 0.4348357986738242,
+          "60": 0.47582268231685826,
+          "80": 0.4818601947441192
+        }
+      },
+      "sequence_gru": {
+        "epochs": 60,
+        "cv_macro_f1": 0.39305164055061975,
+        "candidates": {
+          "20": 0.32778044755028635,
+          "40": 0.3660833177251899,
+          "60": 0.39305164055061975,
+          "80": 0.380187985979434
+        }
+      },
+      "sequence_bigru": {
+        "epochs": 80,
+        "cv_macro_f1": 0.4234284490725708,
+        "candidates": {
+          "20": 0.35955464600749837,
+          "40": 0.38633473586307954,
+          "60": 0.39028788145700966,
+          "80": 0.4234284490725708
+        }
+      },
+      "sequence_lstm_lstm_gru": {
+        "epochs": 80,
+        "cv_macro_f1": 0.3715208370332737,
+        "candidates": {
+          "20": 0.21229445609429953,
+          "40": 0.336438472388624,
+          "60": 0.3629347998954211,
+          "80": 0.3715208370332737
+        }
+      },
+      "classical_visual": {
+        "cv_macro_f1": 0.46715571452218674,
+        "classifier": "rf"
+      },
+      "classical_audio": {
+        "cv_macro_f1": 0.4642854354938004,
+        "classifier": "lr"
+      },
+      "classical_fusion": {
+        "cv_macro_f1": 0.5083442809570918,
+        "classifier": "lr"
+      }
+    },
+    "selected_by_training_cv": "classical_fusion",
+    "seed": 42,
+    "folds": [
+      {
+        "fit": [
+          "dog2.mov",
+          "dog3.mov",
+          "dog8.mov",
+          "dog9.mov",
+          "dog10.mov",
+          "dog11.mov",
+          "IMG_5354.MOV",
+          "IMG_5356.MOV",
+          "IMG_5359.MOV",
+          "IMG_5363.MOV",
+          "IMG_5364.MOV",
+          "IMG_5365.MOV",
+          "IMG_5366.MOV",
+          "IMG_5368.MOV",
+          "IMG_5369.MOV",
+          "IMG_5370.MOV",
+          "IMG_5371.MOV",
+          "IMG_5381.MOV",
+          "IMG_5382.MOV",
+          "IMG_5385.MOV",
+          "IMG_5386.MOV",
+          "IMG_5388.MOV",
+          "IMG_5389.MOV",
+          "IMG_5391.MOV",
+          "IMG_5392.MOV",
+          "IMG_5393.MOV",
+          "IMG_5394.MOV",
+          "IMG_5404.MOV",
+          "IMG_5408.MOV",
+          "IMG_5409.MOV",
+          "IMG_5410.MOV",
+          "IMG_5411.MOV",
+          "IMG_5412.MOV",
+          "IMG_5413.MOV",
+          "IMG_5414.MOV",
+          "IMG_5415.MOV",
+          "IMG_5416.MOV",
+          "IMG_5417.MOV",
+          "IMG_5425.MOV",
+          "IMG_5495.MOV",
+          "IMG_5525.MOV",
+          "IMG_5526.MOV",
+          "IMG_5528.MOV",
+          "IMG_5533.MOV",
+          "IMG_5542.mov",
+          "IMG_5543.MOV",
+          "IMG_5547.mov",
+          "IMG_5556.MOV",
+          "IMG_5560.MOV",
+          "IMG_5563.MOV",
+          "IMG_5565.MOV",
+          "IMG_5570.MOV",
+          "IMG_5571.MOV",
+          "IMG_5572.MOV",
+          "IMG_5578.MOV",
+          "IMG_5581.MOV",
+          "IMG_5582.mov",
+          "IMG_5583.mov",
+          "IMG_5584.MOV",
+          "IMG_5585.MOV",
+          "IMG_5588.mov",
+          "IMG_5592.mov"
+        ],
+        "validation": [
+          "dog5.mov",
+          "dog6.mov",
+          "dog14.mov",
+          "IMG_5357.MOV",
+          "IMG_5358.MOV",
+          "IMG_5360.MOV",
+          "IMG_5367.MOV",
+          "IMG_5372.MOV",
+          "IMG_5374.MOV",
+          "IMG_5376.MOV",
+          "IMG_5380.MOV",
+          "IMG_5387.MOV",
+          "IMG_5390.MOV",
+          "IMG_5395.MOV",
+          "IMG_5399.MOV",
+          "IMG_5407.MOV",
+          "IMG_5422.MOV",
+          "IMG_5423.MOV",
+          "IMG_5496.MOV",
+          "IMG_5522.MOV",
+          "IMG_5535.MOV",
+          "IMG_5540.mov",
+          "IMG_5546.MOV",
+          "IMG_5557.MOV",
+          "IMG_5558.MOV",
+          "IMG_5559.MOV",
+          "IMG_5562.mov",
+          "IMG_5574.mov",
+          "IMG_5577.MOV",
+          "IMG_5579.MOV",
+          "IMG_5587.mov"
+        ]
+      },
+      {
+        "fit": [
+          "dog3.mov",
+          "dog5.mov",
+          "dog6.mov",
+          "dog9.mov",
+          "dog10.mov",
+          "dog14.mov",
+          "IMG_5354.MOV",
+          "IMG_5357.MOV",
+          "IMG_5358.MOV",
+          "IMG_5360.MOV",
+          "IMG_5363.MOV",
+          "IMG_5367.MOV",
+          "IMG_5368.MOV",
+          "IMG_5370.MOV",
+          "IMG_5372.MOV",
+          "IMG_5374.MOV",
+          "IMG_5376.MOV",
+          "IMG_5380.MOV",
+          "IMG_5381.MOV",
+          "IMG_5385.MOV",
+          "IMG_5386.MOV",
+          "IMG_5387.MOV",
+          "IMG_5388.MOV",
+          "IMG_5390.MOV",
+          "IMG_5391.MOV",
+          "IMG_5392.MOV",
+          "IMG_5395.MOV",
+          "IMG_5399.MOV",
+          "IMG_5404.MOV",
+          "IMG_5407.MOV",
+          "IMG_5412.MOV",
+          "IMG_5416.MOV",
+          "IMG_5417.MOV",
+          "IMG_5422.MOV",
+          "IMG_5423.MOV",
+          "IMG_5495.MOV",
+          "IMG_5496.MOV",
+          "IMG_5522.MOV",
+          "IMG_5528.MOV",
+          "IMG_5533.MOV",
+          "IMG_5535.MOV",
+          "IMG_5540.mov",
+          "IMG_5542.mov",
+          "IMG_5543.MOV",
+          "IMG_5546.MOV",
+          "IMG_5556.MOV",
+          "IMG_5557.MOV",
+          "IMG_5558.MOV",
+          "IMG_5559.MOV",
+          "IMG_5562.mov",
+          "IMG_5570.MOV",
+          "IMG_5572.MOV",
+          "IMG_5574.mov",
+          "IMG_5577.MOV",
+          "IMG_5579.MOV",
+          "IMG_5581.MOV",
+          "IMG_5582.mov",
+          "IMG_5583.mov",
+          "IMG_5584.MOV",
+          "IMG_5585.MOV",
+          "IMG_5587.mov",
+          "IMG_5588.mov"
+        ],
+        "validation": [
+          "dog2.mov",
+          "dog8.mov",
+          "dog11.mov",
+          "IMG_5356.MOV",
+          "IMG_5359.MOV",
+          "IMG_5364.MOV",
+          "IMG_5365.MOV",
+          "IMG_5366.MOV",
+          "IMG_5369.MOV",
+          "IMG_5371.MOV",
+          "IMG_5382.MOV",
+          "IMG_5389.MOV",
+          "IMG_5393.MOV",
+          "IMG_5394.MOV",
+          "IMG_5408.MOV",
+          "IMG_5409.MOV",
+          "IMG_5410.MOV",
+          "IMG_5411.MOV",
+          "IMG_5413.MOV",
+          "IMG_5414.MOV",
+          "IMG_5415.MOV",
+          "IMG_5425.MOV",
+          "IMG_5525.MOV",
+          "IMG_5526.MOV",
+          "IMG_5547.mov",
+          "IMG_5560.MOV",
+          "IMG_5563.MOV",
+          "IMG_5565.MOV",
+          "IMG_5571.MOV",
+          "IMG_5578.MOV",
+          "IMG_5592.mov"
+        ]
+      },
+      {
+        "fit": [
+          "dog2.mov",
+          "dog5.mov",
+          "dog6.mov",
+          "dog8.mov",
+          "dog11.mov",
+          "dog14.mov",
+          "IMG_5356.MOV",
+          "IMG_5357.MOV",
+          "IMG_5358.MOV",
+          "IMG_5359.MOV",
+          "IMG_5360.MOV",
+          "IMG_5364.MOV",
+          "IMG_5365.MOV",
+          "IMG_5366.MOV",
+          "IMG_5367.MOV",
+          "IMG_5369.MOV",
+          "IMG_5371.MOV",
+          "IMG_5372.MOV",
+          "IMG_5374.MOV",
+          "IMG_5376.MOV",
+          "IMG_5380.MOV",
+          "IMG_5382.MOV",
+          "IMG_5387.MOV",
+          "IMG_5389.MOV",
+          "IMG_5390.MOV",
+          "IMG_5393.MOV",
+          "IMG_5394.MOV",
+          "IMG_5395.MOV",
+          "IMG_5399.MOV",
+          "IMG_5407.MOV",
+          "IMG_5408.MOV",
+          "IMG_5409.MOV",
+          "IMG_5410.MOV",
+          "IMG_5411.MOV",
+          "IMG_5413.MOV",
+          "IMG_5414.MOV",
+          "IMG_5415.MOV",
+          "IMG_5422.MOV",
+          "IMG_5423.MOV",
+          "IMG_5425.MOV",
+          "IMG_5496.MOV",
+          "IMG_5522.MOV",
+          "IMG_5525.MOV",
+          "IMG_5526.MOV",
+          "IMG_5535.MOV",
+          "IMG_5540.mov",
+          "IMG_5546.MOV",
+          "IMG_5547.mov",
+          "IMG_5557.MOV",
+          "IMG_5558.MOV",
+          "IMG_5559.MOV",
+          "IMG_5560.MOV",
+          "IMG_5562.mov",
+          "IMG_5563.MOV",
+          "IMG_5565.MOV",
+          "IMG_5571.MOV",
+          "IMG_5574.mov",
+          "IMG_5577.MOV",
+          "IMG_5578.MOV",
+          "IMG_5579.MOV",
+          "IMG_5587.mov",
+          "IMG_5592.mov"
+        ],
+        "validation": [
+          "dog3.mov",
+          "dog9.mov",
+          "dog10.mov",
+          "IMG_5354.MOV",
+          "IMG_5363.MOV",
+          "IMG_5368.MOV",
+          "IMG_5370.MOV",
+          "IMG_5381.MOV",
+          "IMG_5385.MOV",
+          "IMG_5386.MOV",
+          "IMG_5388.MOV",
+          "IMG_5391.MOV",
+          "IMG_5392.MOV",
+          "IMG_5404.MOV",
+          "IMG_5412.MOV",
+          "IMG_5416.MOV",
+          "IMG_5417.MOV",
+          "IMG_5495.MOV",
+          "IMG_5528.MOV",
+          "IMG_5533.MOV",
+          "IMG_5542.mov",
+          "IMG_5543.MOV",
+          "IMG_5556.MOV",
+          "IMG_5570.MOV",
+          "IMG_5572.MOV",
+          "IMG_5581.MOV",
+          "IMG_5582.mov",
+          "IMG_5583.mov",
+          "IMG_5584.MOV",
+          "IMG_5585.MOV",
+          "IMG_5588.mov"
+        ]
+      }
+    ]
+  },
+  "models": [
+    {
+      "model": "neural_visual",
+      "mean_test_macro_f1": 0.44939911178870645,
+      "metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.43047619047619046,
+          "accuracy": 0.5217391304347826,
+          "support": 23,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0,
+              4
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.16666666666666666,
+          "accuracy": 0.43478260869565216,
+          "support": 23,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              1,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              6,
+              1,
+              1,
+              10
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.5101679929266136,
+          "accuracy": 0.6956521739130435,
+          "support": 23,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              11,
+              0,
+              1,
+              5
+            ],
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.5111111111111111,
+          "accuracy": 0.5294117647058824,
+          "support": 17,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              4
+            ],
+            [
+              0,
+              2,
+              6
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.6861598440545809,
+          "accuracy": 0.6956521739130435,
+          "support": 23,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              10,
+              5
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.391812865497076,
+          "accuracy": 0.6428571428571429,
+          "support": 14,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              8
+            ]
+          ]
+        }
+      ],
+      "single_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.3703703703703704,
+          "accuracy": 0.5384615384615384,
+          "support": 13,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              3
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.2,
+          "accuracy": 0.6153846153846154,
+          "support": 13,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1,
+              8
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.43452380952380953,
+          "accuracy": 0.5384615384615384,
+          "support": 13,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              0,
+              1,
+              4
+            ],
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.39153439153439146,
+          "accuracy": 0.36363636363636365,
+          "support": 11,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.706766917293233,
+          "accuracy": 0.7692307692307693,
+          "support": 13,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.4444444444444445,
+          "accuracy": 0.6666666666666666,
+          "support": 9,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              5
+            ]
+          ]
+        }
+      ],
+      "multi_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.4000000000000001,
+          "accuracy": 0.5,
+          "support": 10,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.1,
+          "accuracy": 0.2,
+          "support": 10,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              4,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.43333333333333335,
+          "accuracy": 0.9,
+          "support": 10,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              7,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.30303030303030304,
+          "accuracy": 0.8333333333333334,
+          "support": 6,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.5833333333333333,
+          "accuracy": 0.6,
+          "support": 10,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.2857142857142857,
+          "accuracy": 0.6,
+          "support": 5,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "model": "neural_audio",
+      "mean_test_macro_f1": 0.368139880952381,
+      "metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.3434343434343434,
+          "accuracy": 0.34782608695652173,
+          "support": 23,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              6,
+              3
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.2745535714285714,
+          "accuracy": 0.6086956521739131,
+          "support": 23,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              3,
+              1,
+              13
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.19545454545454544,
+          "accuracy": 0.43478260869565216,
+          "support": 23,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              1,
+              1,
+              6
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.25,
+          "accuracy": 0.23529411764705882,
+          "support": 17,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              2,
+              4,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.6057142857142856,
+          "accuracy": 0.6086956521739131,
+          "support": 23,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              7
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.5396825396825397,
+          "accuracy": 0.8571428571428571,
+          "support": 14,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              10
+            ]
+          ]
+        }
+      ],
+      "single_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.19047619047619047,
+          "accuracy": 0.23076923076923078,
+          "support": 13,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              3,
+              3
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.3355263157894737,
+          "accuracy": 0.6923076923076923,
+          "support": 13,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              0,
+              8
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.20476190476190476,
+          "accuracy": 0.38461538461538464,
+          "support": 13,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              0,
+              1,
+              4
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.2074074074074074,
+          "accuracy": 0.18181818181818182,
+          "support": 11,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.5751633986928104,
+          "accuracy": 0.6153846153846154,
+          "support": 13,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              4
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.4743589743589744,
+          "accuracy": 0.7777777777777778,
+          "support": 9,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              6
+            ]
+          ]
+        }
+      ],
+      "multi_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.5285714285714286,
+          "accuracy": 0.5,
+          "support": 10,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              3,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.19230769230769232,
+          "accuracy": 0.5,
+          "support": 10,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.16666666666666666,
+          "accuracy": 0.5,
+          "support": 10,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              5,
+              1,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.16666666666666666,
+          "accuracy": 0.3333333333333333,
+          "support": 6,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.5833333333333333,
+          "accuracy": 0.6,
+          "support": 10,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "support": 5,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "model": "neural_fusion",
+      "mean_test_macro_f1": 0.44205315954140306,
+      "metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.6501847115657857,
+          "accuracy": 0.6521739130434783,
+          "support": 23,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              0,
+              5
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              0,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.16666666666666666,
+          "accuracy": 0.4782608695652174,
+          "support": 23,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              6,
+              0,
+              1,
+              11
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.3602150537634409,
+          "accuracy": 0.6956521739130435,
+          "support": 23,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              12,
+              1,
+              0,
+              4
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.38888888888888884,
+          "accuracy": 0.35294117647058826,
+          "support": 17,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              0,
+              5,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.6166666666666667,
+          "accuracy": 0.6521739130434783,
+          "support": 23,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              11,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.4696969696969697,
+          "accuracy": 0.7857142857142857,
+          "support": 14,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              10
+            ]
+          ]
+        }
+      ],
+      "single_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.3703703703703704,
+          "accuracy": 0.5384615384615384,
+          "support": 13,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              3
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.175,
+          "accuracy": 0.5384615384615384,
+          "support": 13,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              1,
+              7
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.31932773109243695,
+          "accuracy": 0.6153846153846154,
+          "support": 13,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.27777777777777773,
+          "accuracy": 0.2727272727272727,
+          "support": 11,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.5112781954887218,
+          "accuracy": 0.6153846153846154,
+          "support": 13,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              7,
+              3
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.2857142857142857,
+          "accuracy": 0.6666666666666666,
+          "support": 9,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              6
+            ]
+          ]
+        }
+      ],
+      "multi_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.8333333333333334,
+          "accuracy": 0.8,
+          "support": 10,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              2
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.15384615384615385,
+          "accuracy": 0.4,
+          "support": 10,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.41428571428571426,
+          "accuracy": 0.8,
+          "support": 10,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.2222222222222222,
+          "accuracy": 0.5,
+          "support": 6,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.696969696969697,
+          "accuracy": 0.7,
+          "support": 10,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "support": 5,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "model": "sequence_cnn",
+      "mean_test_macro_f1": 0.409615928142143,
+      "metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.31664470794905575,
+          "accuracy": 0.34782608695652173,
+          "support": 23,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              5,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              3,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.27462121212121215,
+          "accuracy": 0.6521739130434783,
+          "support": 23,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              2,
+              14
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.210727969348659,
+          "accuracy": 0.43478260869565216,
+          "support": 23,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              3,
+              1,
+              4
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.5358974358974359,
+          "accuracy": 0.47058823529411764,
+          "support": 17,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              4,
+              2
+            ],
+            [
+              0,
+              6,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.5801217038539555,
+          "accuracy": 0.6086956521739131,
+          "support": 23,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              10,
+              5
+            ],
+            [
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.5396825396825397,
+          "accuracy": 0.8571428571428571,
+          "support": 14,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              10
+            ]
+          ]
+        }
+      ],
+      "single_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.1858974358974359,
+          "accuracy": 0.23076923076923078,
+          "support": 13,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              3,
+              3
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.35,
+          "accuracy": 0.7692307692307693,
+          "support": 13,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              9
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.25980392156862747,
+          "accuracy": 0.5384615384615384,
+          "support": 13,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.4484848484848485,
+          "accuracy": 0.45454545454545453,
+          "support": 11,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              3,
+              2
+            ],
+            [
+              0,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.5112781954887218,
+          "accuracy": 0.6153846153846154,
+          "support": 13,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              7,
+              3
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.4743589743589744,
+          "accuracy": 0.7777777777777778,
+          "support": 9,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              6
+            ]
+          ]
+        }
+      ],
+      "multi_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.4777777777777778,
+          "accuracy": 0.5,
+          "support": 10,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.19230769230769232,
+          "accuracy": 0.5,
+          "support": 10,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.125,
+          "accuracy": 0.3,
+          "support": 10,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              3,
+              3,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.3238095238095238,
+          "accuracy": 0.5,
+          "support": 6,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.6,
+          "accuracy": 0.6,
+          "support": 10,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "support": 5,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "model": "sequence_gru",
+      "mean_test_macro_f1": 0.4015778719401908,
+      "metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.3671794871794872,
+          "accuracy": 0.4782608695652174,
+          "support": 23,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              3,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.30303030303030304,
+          "accuracy": 0.6956521739130435,
+          "support": 23,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              0,
+              14
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.23043478260869565,
+          "accuracy": 0.391304347826087,
+          "support": 23,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              4,
+              1,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.5003367003367004,
+          "accuracy": 0.5294117647058824,
+          "support": 17,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              0,
+              3,
+              3
+            ],
+            [
+              1,
+              2,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.5576923076923077,
+          "accuracy": 0.5652173913043478,
+          "support": 23,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              7
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.4507936507936508,
+          "accuracy": 0.7857142857142857,
+          "support": 14,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              10
+            ]
+          ]
+        }
+      ],
+      "single_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.44047619047619047,
+          "accuracy": 0.6153846153846154,
+          "support": 13,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.3533834586466165,
+          "accuracy": 0.7692307692307693,
+          "support": 13,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              8
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.27884615384615385,
+          "accuracy": 0.46153846153846156,
+          "support": 13,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              3,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.5314814814814814,
+          "accuracy": 0.5454545454545454,
+          "support": 11,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              0,
+              3,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.5125,
+          "accuracy": 0.5384615384615384,
+          "support": 13,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              5,
+              5
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.3076923076923077,
+          "accuracy": 0.6666666666666666,
+          "support": 9,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              6
+            ]
+          ]
+        }
+      ],
+      "multi_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.25925925925925924,
+          "accuracy": 0.3,
+          "support": 10,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.21428571428571427,
+          "accuracy": 0.6,
+          "support": 10,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              6
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.17142857142857143,
+          "accuracy": 0.3,
+          "support": 10,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              1,
+              1,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.2222222222222222,
+          "accuracy": 0.5,
+          "support": 6,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.6,
+          "accuracy": 0.6,
+          "support": 10,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "support": 5,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "model": "sequence_bigru",
+      "mean_test_macro_f1": 0.36365785299289133,
+      "metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.2474916387959866,
+          "accuracy": 0.30434782608695654,
+          "support": 23,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              5,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              3,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.37058823529411766,
+          "accuracy": 0.782608695652174,
+          "support": 23,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1,
+              15
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.2121212121212121,
+          "accuracy": 0.5217391304347826,
+          "support": 23,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              11,
+              0,
+              0,
+              6
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.20634920634920637,
+          "accuracy": 0.17647058823529413,
+          "support": 17,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              2,
+              5,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.6057142857142856,
+          "accuracy": 0.6086956521739131,
+          "support": 23,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              7
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.5396825396825397,
+          "accuracy": 0.8571428571428571,
+          "support": 14,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              10
+            ]
+          ]
+        }
+      ],
+      "single_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.1858974358974359,
+          "accuracy": 0.23076923076923078,
+          "support": 13,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              3,
+              3
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.3771929824561403,
+          "accuracy": 0.7692307692307693,
+          "support": 13,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1,
+              8
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.2184873949579832,
+          "accuracy": 0.46153846153846156,
+          "support": 13,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              0,
+              4
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.2272727272727273,
+          "accuracy": 0.18181818181818182,
+          "support": 11,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              0,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.675,
+          "accuracy": 0.6923076923076923,
+          "support": 13,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              4
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.4743589743589744,
+          "accuracy": 0.7777777777777778,
+          "support": 9,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              6
+            ]
+          ]
+        }
+      ],
+      "multi_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.3333333333333333,
+          "accuracy": 0.4,
+          "support": 10,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.35833333333333334,
+          "accuracy": 0.8,
+          "support": 10,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              7
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.1875,
+          "accuracy": 0.6,
+          "support": 10,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.09523809523809523,
+          "accuracy": 0.16666666666666666,
+          "support": 6,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.4949494949494949,
+          "accuracy": 0.5,
+          "support": 10,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "support": 5,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "model": "sequence_lstm_lstm_gru",
+      "mean_test_macro_f1": 0.40555652599512243,
+      "metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.3385964912280701,
+          "accuracy": 0.34782608695652173,
+          "support": 23,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              3,
+              6,
+              4
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.21666666666666667,
+          "accuracy": 0.43478260869565216,
+          "support": 23,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              2,
+              3,
+              9
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.16233766233766234,
+          "accuracy": 0.21739130434782608,
+          "support": 23,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              7,
+              4,
+              2
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.34208754208754205,
+          "accuracy": 0.35294117647058826,
+          "support": 17,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              4
+            ],
+            [
+              0,
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.5180952380952382,
+          "accuracy": 0.5217391304347826,
+          "support": 23,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              7,
+              8
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.8555555555555555,
+          "accuracy": 0.8571428571428571,
+          "support": 14,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              9
+            ]
+          ]
+        }
+      ],
+      "single_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.2692307692307692,
+          "accuracy": 0.3076923076923077,
+          "support": 13,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              3,
+              3
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.15625,
+          "accuracy": 0.38461538461538464,
+          "support": 13,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              2,
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.2153846153846154,
+          "accuracy": 0.3076923076923077,
+          "support": 13,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              3,
+              3,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.24074074074074073,
+          "accuracy": 0.18181818181818182,
+          "support": 11,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              0,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.5125,
+          "accuracy": 0.5384615384615384,
+          "support": 13,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              5,
+              5
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.7777777777777778,
+          "accuracy": 0.7777777777777778,
+          "support": 9,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              5
+            ]
+          ]
+        }
+      ],
+      "multi_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.3968253968253968,
+          "accuracy": 0.4,
+          "support": 10,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.28181818181818186,
+          "accuracy": 0.5,
+          "support": 10,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              2,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.05555555555555555,
+          "accuracy": 0.1,
+          "support": 10,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              4,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.2962962962962963,
+          "accuracy": 0.6666666666666666,
+          "support": 6,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.4949494949494949,
+          "accuracy": 0.5,
+          "support": 10,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "support": 5,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "model": "classical_visual",
+      "mean_test_macro_f1": 0.5136042401393278,
+      "metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.5103785103785105,
+          "accuracy": 0.6086956521739131,
+          "support": 23,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              10,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              3,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.3194444444444444,
+          "accuracy": 0.7391304347826086,
+          "support": 23,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              0,
+              15
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.32619047619047614,
+          "accuracy": 0.6521739130434783,
+          "support": 23,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              11,
+              0,
+              0,
+              6
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.61010101010101,
+          "accuracy": 0.5882352941176471,
+          "support": 17,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              0,
+              2,
+              6
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.7758284600389863,
+          "accuracy": 0.782608695652174,
+          "support": 23,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              11,
+              4
+            ],
+            [
+              1,
+              7
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.5396825396825397,
+          "accuracy": 0.8571428571428571,
+          "support": 14,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              10
+            ]
+          ]
+        }
+      ],
+      "single_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.3452380952380952,
+          "accuracy": 0.5384615384615384,
+          "support": 13,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.3522727272727273,
+          "accuracy": 0.8461538461538461,
+          "support": 13,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.28125,
+          "accuracy": 0.5384615384615384,
+          "support": 13,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              0,
+              4
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.5814814814814815,
+          "accuracy": 0.5454545454545454,
+          "support": 11,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.7450980392156863,
+          "accuracy": 0.7692307692307693,
+          "support": 13,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              7,
+              3
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.4743589743589744,
+          "accuracy": 0.7777777777777778,
+          "support": 9,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              6
+            ]
+          ]
+        }
+      ],
+      "multi_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.6793650793650793,
+          "accuracy": 0.7,
+          "support": 10,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.2785714285714286,
+          "accuracy": 0.6,
+          "support": 10,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.38095238095238093,
+          "accuracy": 0.8,
+          "support": 10,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.26666666666666666,
+          "accuracy": 0.6666666666666666,
+          "support": 6,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.8,
+          "accuracy": 0.8,
+          "support": 10,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "support": 5,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "model": "classical_audio",
+      "mean_test_macro_f1": 0.37889879771694285,
+      "metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.27647714604236345,
+          "accuracy": 0.34782608695652173,
+          "support": 23,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              4,
+              3
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.2936507936507936,
+          "accuracy": 0.7391304347826086,
+          "support": 23,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              16
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.23202614379084968,
+          "accuracy": 0.5652173913043478,
+          "support": 23,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              12,
+              1,
+              0,
+              4
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.305050505050505,
+          "accuracy": 0.29411764705882354,
+          "support": 17,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              1,
+              4,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.5964912280701754,
+          "accuracy": 0.6086956521739131,
+          "support": 23,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.5696969696969697,
+          "accuracy": 0.8571428571428571,
+          "support": 14,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              10
+            ]
+          ]
+        }
+      ],
+      "single_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.2261904761904762,
+          "accuracy": 0.3076923076923077,
+          "support": 13,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              3,
+              2,
+              3
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.3522727272727273,
+          "accuracy": 0.8461538461538461,
+          "support": 13,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.28421052631578947,
+          "accuracy": 0.6153846153846154,
+          "support": 13,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              7,
+              0,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.21666666666666667,
+          "accuracy": 0.18181818181818182,
+          "support": 11,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.4583333333333333,
+          "accuracy": 0.5384615384615384,
+          "support": 13,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              4
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.5079365079365079,
+          "accuracy": 0.7777777777777778,
+          "support": 9,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              6
+            ]
+          ]
+        }
+      ],
+      "multi_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.35555555555555557,
+          "accuracy": 0.4,
+          "support": 10,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              3,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.21428571428571427,
+          "accuracy": 0.6,
+          "support": 10,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              6
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.16666666666666666,
+          "accuracy": 0.5,
+          "support": 10,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              5,
+              1,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.2222222222222222,
+          "accuracy": 0.5,
+          "support": 6,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.696969696969697,
+          "accuracy": 0.7,
+          "support": 10,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "support": 5,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "model": "classical_fusion",
+      "mean_test_macro_f1": 0.4781379590292067,
+      "metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.5555555555555556,
+          "accuracy": 0.6521739130434783,
+          "support": 23,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              12,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              5,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.3547297297297297,
+          "accuracy": 0.8260869565217391,
+          "support": 23,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              17
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.36979166666666663,
+          "accuracy": 0.7391304347826086,
+          "support": 23,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              13,
+              0,
+              0,
+              4
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.29638009049773756,
+          "accuracy": 0.23529411764705882,
+          "support": 17,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              0,
+              7,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.7526881720430108,
+          "accuracy": 0.782608695652174,
+          "support": 23,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              13,
+              2
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.5396825396825397,
+          "accuracy": 0.8571428571428571,
+          "support": 14,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              10
+            ]
+          ]
+        }
+      ],
+      "single_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.3697478991596639,
+          "accuracy": 0.6153846153846154,
+          "support": 13,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              7,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.3522727272727273,
+          "accuracy": 0.8461538461538461,
+          "support": 13,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              10
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.31932773109243695,
+          "accuracy": 0.6153846153846154,
+          "support": 13,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.27777777777777773,
+          "accuracy": 0.2727272727272727,
+          "support": 11,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.7833333333333333,
+          "accuracy": 0.8461538461538461,
+          "support": 13,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.4743589743589744,
+          "accuracy": 0.7777777777777778,
+          "support": 9,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              6
+            ]
+          ]
+        }
+      ],
+      "multi_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.5897435897435898,
+          "accuracy": 0.7,
+          "support": 10,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.35833333333333334,
+          "accuracy": 0.8,
+          "support": 10,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              7
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.43333333333333335,
+          "accuracy": 0.9,
+          "support": 10,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              7,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.09523809523809523,
+          "accuracy": 0.16666666666666666,
+          "support": 6,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              4,
+              1
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.696969696969697,
+          "accuracy": 0.7,
+          "support": 10,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "support": 5,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "model": "majority_baseline",
+      "mean_test_macro_f1": 0.23958068644306518,
+      "metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.24074074074074073,
+          "accuracy": 0.5652173913043478,
+          "support": 23,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              13,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              6,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.21951219512195122,
+          "accuracy": 0.782608695652174,
+          "support": 23,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              18
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.2125,
+          "accuracy": 0.7391304347826086,
+          "support": 23,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              17,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.21333333333333335,
+          "accuracy": 0.47058823529411764,
+          "support": 17,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              6
+            ],
+            [
+              0,
+              0,
+              8
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.25806451612903225,
+          "accuracy": 0.34782608695652173,
+          "support": 23,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              15
+            ],
+            [
+              0,
+              8
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.29333333333333333,
+          "accuracy": 0.7857142857142857,
+          "support": 14,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              11
+            ]
+          ]
+        }
+      ],
+      "single_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.25396825396825395,
+          "accuracy": 0.6153846153846154,
+          "support": 13,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.22916666666666666,
+          "accuracy": 0.8461538461538461,
+          "support": 13,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              11
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.20454545454545456,
+          "accuracy": 0.6923076923076923,
+          "support": 13,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              9,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.14285714285714285,
+          "accuracy": 0.2727272727272727,
+          "support": 11,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.1875,
+          "accuracy": 0.23076923076923078,
+          "support": 13,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              10
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.2916666666666667,
+          "accuracy": 0.7777777777777778,
+          "support": 9,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              7
+            ]
+          ]
+        }
+      ],
+      "multi_dog_metrics": [
+        {
+          "target": "hareket",
+          "macro_f1": 0.2222222222222222,
+          "accuracy": 0.5,
+          "support": 10,
+          "classes": [
+            "hareketsiz",
+            "kosuyor_oynuyor",
+            "yuruyor"
+          ],
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "ses",
+          "macro_f1": 0.20588235294117646,
+          "accuracy": 0.7,
+          "support": 10,
+          "classes": [
+            "havlama",
+            "hirlama",
+            "inleme",
+            "yok"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              7
+            ]
+          ]
+        },
+        {
+          "target": "durus",
+          "macro_f1": 0.2222222222222222,
+          "accuracy": 0.8,
+          "support": 10,
+          "classes": [
+            "ayakta",
+            "oturuyor",
+            "sirtustu",
+            "yatiyor"
+          ],
+          "confusion_matrix": [
+            [
+              8,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_konum",
+          "macro_f1": 0.30303030303030304,
+          "accuracy": 0.8333333333333334,
+          "support": 6,
+          "classes": [
+            "asagi_bacak_arasi",
+            "notr",
+            "yukari"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "kuyruk_hareket",
+          "macro_f1": 0.3333333333333333,
+          "accuracy": 0.5,
+          "support": 10,
+          "classes": [
+            "sallamiyor",
+            "salliyor"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              5
+            ]
+          ]
+        },
+        {
+          "target": "kulak",
+          "macro_f1": 0.2962962962962963,
+          "accuracy": 0.8,
+          "support": 5,
+          "classes": [
+            "dik_one",
+            "geride_yassi",
+            "notr"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Behavior/sound annotations, no emotion ground truth.",
+    "Largest-box visual features may not match the annotators focal dog.",
+    "Sound labels may refer to the focal dog; YAMNet observes the mixed recording.",
+    "Video labels do not validate temporal window predictions.",
+    "Previously inspected holdout, not an independent new test; no dog identity split."
+  ],
+  "verification": {
+    "checkpoint_prediction_replay": 5334,
+    "neural_models": 7,
+    "videos": 127,
+    "targets": 6
+  }
+}

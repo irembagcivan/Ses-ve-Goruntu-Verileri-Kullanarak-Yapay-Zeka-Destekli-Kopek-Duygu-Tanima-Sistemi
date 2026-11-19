@@ -1,0 +1,19 @@
+{
+  "videos": 127,
+  "day_counts": {
+    "UNKNOWN": 4,
+    "2026-07-01": 1,
+    "2026-06-22": 45,
+    "2026-07-11": 6,
+    "2026-06-18": 67,
+    "2026-06-20": 4
+  },
+  "evidence_counts": {
+    "missing_timestamp": 4,
+    "container_creation_time_only": 9,
+    "camera_creationdate": 114
+  },
+  "metadata_conflicts": 17,
+  "confirmed_sessions": 0,
+  "scope": "Embedded metadata day candidates, not verified filming sessions or dog identities. Camera-local day preferred; container UTC day is fallback. Unknown dates never assigned from file names/mtime."
+}

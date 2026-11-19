@@ -1,0 +1,21 @@
+{
+  "version": "labels_final-v13",
+  "model": "results/demo_v13_release/neural_fusion.pt",
+  "gallery": "results/demo_v13_release/public/canine_demo_v13.html",
+  "report": "results/demo_v13_release/report.json",
+  "annotation_source": "labels_final.csv",
+  "evaluation_version": "nested_camera_day-v14",
+  "day_validation": "results/day_validation_v14/report.json",
+  "targets": [
+    "hareket",
+    "ses",
+    "durus",
+    "kuyruk_konum",
+    "kuyruk_hareket",
+    "kulak"
+  ],
+  "port": 8768,
+  "affect_model": "results/affect_v15_clean/model.json",
+  "late_fusion": "results/late_fusion_v15/deployment.json",
+  "research_version": "literature_affect-v15"
+}

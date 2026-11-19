@@ -1,0 +1,128 @@
+﻿video,durum,kopek_sayisi,gorunurluk,kuyruk_konum,kuyruk_hareket,kulak,durus,hareket,ses,konsensus_disi,degisken,guvensiz,not
+IMG_5354.MOV,tam,1,iyi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,0,0,
+IMG_5355.MOV,tam,1,iyi,yukari,salliyor,notr,ayakta,kosuyor_oynuyor,yok,,1,0,
+IMG_5356.MOV,tam,1,iyi,yukari,salliyor,,ayakta,kosuyor_oynuyor,yok,kulak,1,0,"irem: Önce oturuyor, 5. saniyede koşuyor"
+IMG_5357.MOV,tam,1,iyi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,0,0,
+IMG_5358.MOV,tam,1,iyi,notr,salliyor,notr,yatiyor,hareketsiz,havlama,,0,0,
+IMG_5359.MOV,tam,1,iyi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,0,0,"irem: Haraketsiz, bir yere odaklı bakıyor. "
+IMG_5360.MOV,tam,1,iyi,notr,sallamiyor,notr,ayakta,hareketsiz,yok,,1,0,irem: 9. saniyede yürümeye başlıyor
+IMG_5362.MOV,tam,3_ve_uzeri,iyi,,sallamiyor,notr,yatiyor,hareketsiz,yok,kuyruk_konum,1,1,irem: ilk 6 saniyede görülen soldaki beyaz köpek | afra: odak köpek yok
+IMG_5363.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,yuruyor,yok,,1,0,irem: Yürüme pozisyonundan yatar pozisyona geçiyor.
+IMG_5364.MOV,tam,3_ve_uzeri,iyi,,salliyor,notr,ayakta,hareketsiz,yok,kuyruk_konum,0,0,
+IMG_5365.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,yuruyor,yok,,0,0,
+IMG_5366.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,hareketsiz,havlama,,0,0,
+IMG_5367.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,kosuyor_oynuyor,yok,,1,0,irem: 4. saniyede görünen kahverengi köpek odak alındı.
+IMG_5368.MOV,tam,3_ve_uzeri,iyi,,salliyor,notr,ayakta,yuruyor,havlama,kuyruk_konum,1,0,irem: 16. saniyede kadraja gelen beyaz köpek
+IMG_5369.MOV,tam,1,iyi,,sallamiyor,,yatiyor,hareketsiz,yok,"kuyruk_konum,kulak",1,0,
+IMG_5370.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,hareketsiz,havlama,,1,0,
+IMG_5371.MOV,tam,1,iyi,,sallamiyor,,yatiyor,hareketsiz,yok,"kuyruk_konum,kulak",0,0,
+IMG_5372.MOV,tam,3_ve_uzeri,kismi,yukari,salliyor,notr,ayakta,hareketsiz,yok,,1,0,irem: Ortada durup kuyruk sallayan golden odak alındı 
+IMG_5373.MOV,tam,2,iyi,,sallamiyor,,yatiyor,hareketsiz,yok,"kuyruk_konum,kulak",0,0,irem: öndeki büyük köpek
+IMG_5374.MOV,tam,2,iyi,,sallamiyor,,sirtustu,hareketsiz,yok,"kuyruk_konum,kulak",0,0,irem: ortadaki büyük köpek
+IMG_5375.MOV,tam,1,iyi,yukari,sallamiyor,notr,ayakta,yuruyor,yok,,0,0,
+IMG_5376.MOV,tam,1,iyi,yukari,salliyor,notr,ayakta,yuruyor,yok,,0,0,
+IMG_5377.MOV,tam,3_ve_uzeri,iyi,,sallamiyor,notr,yatiyor,hareketsiz,yok,kuyruk_konum,0,0,irem: patisini yalıyor
+IMG_5378.MOV,tam,1,iyi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,0,0,irem: patisini yalıyor
+IMG_5379.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,kosuyor_oynuyor,havlama,,0,0,irem: siyah köpek odak alındı
+IMG_5380.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,kosuyor_oynuyor,havlama,,0,0,irem: kahverengi köpeğin hırlaması tam duyulmuyor ancak ağız yapısını hırlar gibi. diğer siyah köpek ise havlıyor.
+IMG_5381.MOV,tam,2,iyi,yukari,sallamiyor,notr,ayakta,yuruyor,yok,,0,0,irem: kahverengi köpek odak alındı.
+IMG_5382.MOV,tam,1,iyi,,salliyor,notr,yatiyor,hareketsiz,yok,kuyruk_konum,0,0,
+IMG_5383.MOV,tam,3_ve_uzeri,kismi,notr,salliyor,notr,yatiyor,hareketsiz,yok,,0,1,irem: odak köpek ilk 1 saniyede görünen köpek | afra: odak köpek yok
+IMG_5384.MOV,tam,3_ve_uzeri,kismi,yukari,salliyor,notr,ayakta,kosuyor_oynuyor,havlama,,0,1,irem: videonu başında koşmaya başlayan köpek odak alındı
+IMG_5385.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,hareketsiz,havlama,,1,0,"irem: büyük golden odak alındı. hareketsiz duruyordu, 5. saniyede yürümeye başladı | afra: kadraja odak köpek hariç çok sayıda farklı köpekler de giriyor"
+IMG_5386.MOV,tam,3_ve_uzeri,iyi,,salliyor,notr,ayakta,yuruyor,havlama,kuyruk_konum,0,0,irem: büyük golden odak alındı. 
+IMG_5387.MOV,tam,1,iyi,notr,sallamiyor,,yatiyor,hareketsiz,yok,kulak,0,0,irem: kafasını kaşıyor
+IMG_5388.MOV,tam,1,iyi,notr,sallamiyor,,yatiyor,hareketsiz,yok,kulak,0,0,irem: odak köpek sessiz. arkadan başka köpeklerin havlama sesi geliyor
+IMG_5389.MOV,tam,1,kismi,gorunmuyor,gorunmuyor,notr,yatiyor,hareketsiz,yok,,0,0,
+IMG_5390.MOV,tam,2,iyi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,0,0,
+IMG_5391.MOV,tam,1,iyi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,0,0,
+IMG_5392.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,kosuyor_oynuyor,yok,,0,0,irem: iki tane oynayan köpeğin yanındaki beyaz köpek odak alındı
+IMG_5393.MOV,tam,3_ve_uzeri,iyi,yukari,sallamiyor,notr,ayakta,kosuyor_oynuyor,yok,,0,0,irem: 4 köpeğin en önünceki kameraya daha yakın olan köpek odak alındı 
+IMG_5394.MOV,tam,1,iyi,yukari,sallamiyor,notr,ayakta,yuruyor,yok,,0,0,
+IMG_5395.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,yuruyor,yok,,1,0,irem: kadrajda en çok kalan kahverengi köpek odak alındı. 7. saniyede koşmaya başlıyor.
+IMG_5396.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,kosuyor_oynuyor,yok,,0,1,irem: 2. saniye kadraja girip koşmaya başlayan kahverengi köpek odak alındı. | afra: odak köpek yok
+IMG_5397.MOV,tam,1,iyi,asagi_bacak_arasi,sallamiyor,,ayakta,hareketsiz,yok,kulak,0,0,irem: su içiyor
+IMG_5399.MOV,tam,2,kismi,yukari,salliyor,notr,ayakta,yuruyor,yok,,0,0,irem: kameraya en yakın net köpek odak alındı
+IMG_5400.MOV,tam,3_ve_uzeri,iyi,notr,sallamiyor,notr,ayakta,yuruyor,yok,,0,1,irem: 2. saniyede beliren siyah köpek odak alındı. | afra: odak köpek yok 
+IMG_5401.MOV,tam,1,iyi,notr,sallamiyor,notr,oturuyor,hareketsiz,yok,,1,0,irem: 8. saniyeye kadar oturuyordu. sonrasında kuyruk sallayıp oturduğu yerden atladı ve yürüdü
+IMG_5402.MOV,tam,3_ve_uzeri,iyi,,salliyor,notr,ayakta,kosuyor_oynuyor,yok,kuyruk_konum,0,1,irem: 2. saniyede beliren köpek odak alındı | afra: odak köpek yok
+IMG_5403.MOV,tam,3_ve_uzeri,iyi,,sallamiyor,notr,ayakta,yuruyor,yok,kuyruk_konum,0,0,irem: videoda başında kadraja en yakın olan köpek odak alındı
+IMG_5404.MOV,tam,1,iyi,,sallamiyor,notr,yatiyor,hareketsiz,yok,kuyruk_konum,1,0,irem: 4. saniyede yürümeye başlıyor
+IMG_5405.MOV,tam,1,iyi,notr,salliyor,notr,ayakta,yuruyor,yok,,0,0,
+IMG_5406.MOV,tam,3_ve_uzeri,iyi,yukari,sallamiyor,dik_one,ayakta,yuruyor,havlama,,0,1,irem: 2. saniye kadraja giren gri köpek odak alındı | afra: kadrajda çok köpek var en büyük köpek baz alındı 
+IMG_5407.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,yuruyor,yok,,0,0,irem: 6. saniyede en net görülen köpek odak alındı. bir kadının üstüne ön patilerini koydu. mama yakalamaya çalışıyor | afra: ilk 6 saniyeye kadar olan büyük köpek odak alındı
+IMG_5408.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,hareketsiz,yok,,1,0,irem: kameraya en yakın olan siyah köpek odak alındı. birinin ona mama atmasını bekliyor ama 9. saniyede hafif yer değiştiriyor | afra: en büyük köpek baz alındı
+IMG_5409.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,yuruyor,yok,,1,0,irem: kameraya daha yakın olan siyah köpek odak alındı. 2. saniyede mamayı yakalamak için arka patilerinin üstünde kalkıyor. | afra: en büyük köpek baz alındı
+IMG_5410.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,yuruyor,yok,,0,0,irem: 3. saniyede beliren kahverengi köpek odak alındı | afra: videonun son 7. snde kadrajda olan köpek baz alındı
+IMG_5411.MOV,tam,3_ve_uzeri,iyi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,0,0,irem: 8. saniyeye kadar kadrajda kalıp kameraya en yakın olan gri köpek odak alındı | afra: 7. snden sonraki köpek baz alındı
+IMG_5412.MOV,tam,1,iyi,,sallamiyor,notr,ayakta,hareketsiz,yok,kuyruk_konum,1,0,irem: 1. saniyeye kadar su içti sonrasında yürüdü
+IMG_5413.MOV,tam,1,iyi,yukari,salliyor,notr,ayakta,yuruyor,yok,,0,0,
+IMG_5414.MOV,tam,3_ve_uzeri,iyi,notr,salliyor,notr,ayakta,hareketsiz,yok,,0,0,irem: tüyleri taranan köpek odak alındı. 
+IMG_5415.MOV,tam,2,iyi,,sallamiyor,notr,ayakta,kosuyor_oynuyor,yok,kuyruk_konum,0,0,irem: siyah köpek odak alındı
+IMG_5416.MOV,tam,3_ve_uzeri,iyi,,salliyor,notr,sirtustu,kosuyor_oynuyor,yok,kuyruk_konum,1,0,irem: 2 köpek birlikte oynuyor. siyah köpeği baz aldım. yatarken sırtüstü yatmaya başlıyo
+IMG_5417.MOV,tam,1,iyi,yukari,salliyor,notr,yatiyor,hareketsiz,havlama,,0,0,
+IMG_5418.MOV,tam,2,iyi,,salliyor,notr,ayakta,hareketsiz,yok,kuyruk_konum,0,0,irem: küçük köpek odak alındı. diğer köpeğin yüzünü yalıyor | afra: ayaktaki köpek baz alındı 
+IMG_5422.MOV,tam,2,iyi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,1,0,irem: beyaz köpek odak alındı. ayaktayken arka patilerinin üstüne kalktı. | afra: videonun ilk yarısındaki köpek yatıyor diğer yarısındaki köpek yavaş hareket ediyor
+IMG_5423.MOV,tam,1,iyi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,0,0,
+IMG_5425.MOV,tam,1,kismi,asagi_bacak_arasi,sallamiyor,dik_one,ayakta,hareketsiz,yok,,0,0,
+IMG_5426.MOV,tam,1,iyi,asagi_bacak_arasi,sallamiyor,geride_yassi,ayakta,hareketsiz,havlama,,0,0,
+IMG_5495.MOV,tam,2,kotu,yukari,sallamiyor,,ayakta,hareketsiz,havlama,kulak,1,0,irem: 4. saniyede yürümeye başlıyor
+IMG_5496.MOV,tam,1,kotu,yukari,sallamiyor,,ayakta,yuruyor,yok,kulak,0,0,
+IMG_5497.MOV,tam,1,kotu,yukari,sallamiyor,notr,ayakta,yuruyor,yok,,1,0,irem: bir tık hızlı yürüyor. | afra: kuyruk konumu değişiyor 
+IMG_5498.MOV,tam,3_ve_uzeri,kotu,yukari,sallamiyor,,ayakta,hareketsiz,yok,kulak,1,0,irem: öndeki ayakta köpek odak alındı. 6. saniyede yürümeye başladı
+IMG_5522.MOV,tam,3_ve_uzeri,kismi,,sallamiyor,,ayakta,hareketsiz,yok,"kuyruk_konum,kulak",0,0,irem: öndeki kahverengi köpek odak alındı. ön patileri ile duvara yaslanırken 4 patisinin üstüne geçip durdu.
+IMG_5524.MOV,tam,3_ve_uzeri,kismi,notr,salliyor,,ayakta,kosuyor_oynuyor,yok,kulak,0,0,irem: öndeki siyah köpek odak alındı.
+IMG_5525.MOV,tam,3_ve_uzeri,kismi,notr,salliyor,,ayakta,kosuyor_oynuyor,yok,kulak,1,0,irem: siyah köpek odak alındı. kulakları öne dik ve bazen geriye yaslı oldu. 
+IMG_5526.MOV,tam,2,kismi,notr,salliyor,,ayakta,hareketsiz,havlama,kulak,0,0,irem: öndeki siyah köpek odak alındı
+IMG_5528.MOV,tam,3_ve_uzeri,kismi,,gorunmuyor,,oturuyor,hareketsiz,inleme,"kuyruk_konum,kulak",1,0,irem: kameraya en yakın ve oturan kahverengi köpek odak alındı. hem inledi sızlandı. arada havladı da.  | afra: siyah köpek baz alındı
+IMG_5529.MOV,tam,3_ve_uzeri,kismi,yukari,sallamiyor,dik_one,ayakta,yuruyor,havlama,,0,0,irem: 2. saniyeden itibaren kameranın en önündeki kahverengi köpek odak alındı
+IMG_5532.MOV,tam,3_ve_uzeri,kismi,yukari,salliyor,,ayakta,yuruyor,yok,kulak,1,0,irem: 4. saniyeden itibaren kameraya en yakın olan kahverengi köpek odak alındı. kulakları bazen dik bazen geriye yatık oldu. yer değiştirirken birden durdu ve bir yeri kokladı. | afra: 6. sndeki ayakta olan köpek baz alındı
+IMG_5533.MOV,tam,3_ve_uzeri,kismi,notr,sallamiyor,dik_one,ayakta,yuruyor,yok,,0,0,irem: hareket eden köpek odak alındı
+IMG_5534.MOV,tam,3_ve_uzeri,kismi,yukari,salliyor,,ayakta,hareketsiz,inleme,kulak,0,0,irem: en öndeki kahverengili ve beyazlı köpek odak alındı. yerinde dururken 2. saniyede hareket etmeye başladı  | afra: 2. sndeki oturan büyük köpek baz alındı
+IMG_5535.MOV,tam,3_ve_uzeri,iyi,notr,sallamiyor,,yatiyor,hareketsiz,yok,kulak,0,0,irem: kameranın en önündeki yatan köpek odak alındı. odaklı bir şekilde kameranın olduğu yne bakıyor  | afra: yatan köpek odak alındı kadraj dışındaki köpekler havlıyor
+IMG_5540.mov,tam,3_ve_uzeri,kismi,,sallamiyor,dik_one,ayakta,yuruyor,havlama,kuyruk_konum,1,0,irem: hareket eden siyah köpeğe odaklanıldı. 4. saniyede hareket ediyor
+IMG_5542.mov,tam,3_ve_uzeri,kismi,yukari,salliyor,geride_yassi,ayakta,kosuyor_oynuyor,yok,,1,0,irem: arka patilerinin üstünde kalkan köpek odak alındı | afra: zıplayan köpek baz alındı
+IMG_5543.MOV,tam,1,kismi,notr,sallamiyor,geride_yassi,ayakta,hareketsiz,havlama,,0,0,
+IMG_5545.mov,tam,3_ve_uzeri,kismi,notr,sallamiyor,geride_yassi,ayakta,kosuyor_oynuyor,havlama,,1,1,irem: kahverengi köpek odak alındı. hem havlıyor hem hırlıyor başka bir köpeğe. köpeğin arka ayakları felçli olduğu için oturur pozisyonda yer değiştiriyor
+IMG_5546.MOV,tam,3_ve_uzeri,kismi,yukari,salliyor,dik_one,ayakta,hareketsiz,yok,,0,0,afra: videodaki ilk 2 köpek baz alındı
+IMG_5547.mov,tam,3_ve_uzeri,iyi,notr,sallamiyor,,yatiyor,hareketsiz,havlama,kulak,0,0,irem: en öndeki kahverengi köpek odak alındı.  | afra: öndeki köpek baz alındı
+IMG_5550.MOV,tam,3_ve_uzeri,kotu,notr,sallamiyor,,oturuyor,hareketsiz,havlama,kulak,0,1,irem: siyah köpek odak alındı
+IMG_5556.MOV,tam,2,kotu,gorunmuyor,gorunmuyor,,yatiyor,hareketsiz,yok,kulak,0,0,irem: sağdaki köpek baz alındı. video süresi çok kısa
+IMG_5557.MOV,tam,2,kismi,notr,sallamiyor,dik_one,yatiyor,hareketsiz,yok,,0,0,irem: soldaki köpek baz alındı
+IMG_5558.MOV,tam,2,kismi,,sallamiyor,,yatiyor,hareketsiz,yok,"kuyruk_konum,kulak",0,0,
+IMG_5559.MOV,tam,1,iyi,asagi_bacak_arasi,sallamiyor,,ayakta,hareketsiz,havlama,kulak,0,0,
+IMG_5560.MOV,tam,1,kismi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,0,0,
+IMG_5562.mov,tam,1,iyi,yukari,salliyor,geride_yassi,ayakta,hareketsiz,havlama,,1,0,irem: 4. saniyede yürüyor tekrar duruyor
+IMG_5563.MOV,tam,1,iyi,yukari,salliyor,,ayakta,hareketsiz,havlama,kulak,0,0,
+IMG_5565.MOV,tam,1,kismi,yukari,salliyor,,ayakta,hareketsiz,havlama,kulak,1,0,irem: kulakları bazen öne geliyor
+IMG_5566.MOV,tam,3_ve_uzeri,kismi,yukari,sallamiyor,,ayakta,yuruyor,yok,kulak,1,1,irem: kameraya en yakın siyah köpek baz alındı. 6. saniyeye kadar hareketsiz | afra: odak köpek yok
+IMG_5570.MOV,tam,3_ve_uzeri,iyi,yukari,salliyor,dik_one,ayakta,yuruyor,yok,,0,0,irem: ilk saniyeden itibaren kadrajda olan köpek baz alındı.
+IMG_5571.MOV,tam,3_ve_uzeri,kismi,,salliyor,,ayakta,yuruyor,yok,"kuyruk_konum,kulak",0,0,irem: 4. saniyede kadraja giren köpek baz alındı | afra: odak köpek 3. snde kadraja giren köpek 
+IMG_5572.MOV,tam,3_ve_uzeri,kismi,yukari,sallamiyor,dik_one,oturuyor,yuruyor,havlama,,0,0,irem: sağdaki siyah beyaz köpek baz alındı | afra: odak köpek ayağı yaralı
+IMG_5574.mov,tam,1,kismi,notr,sallamiyor,,yatiyor,hareketsiz,hirlama,kulak,0,0,
+IMG_5577.MOV,tam,1,iyi,yukari,salliyor,notr,ayakta,yuruyor,yok,,0,0,afra: kadraj dışındaki köpekler havlıyor
+IMG_5578.MOV,tam,3_ve_uzeri,iyi,notr,salliyor,,ayakta,hareketsiz,yok,kulak,0,0,irem: en öndeki golden baz alındı
+IMG_5579.MOV,tam,1,kismi,notr,sallamiyor,,ayakta,hareketsiz,yok,kulak,0,0,irem: öndeki golden baz alındı. göbeğini kaşıyor
+IMG_5580.MOV,tam,3_ve_uzeri,kotu,yukari,salliyor,,ayakta,yuruyor,havlama,kulak,1,1,irem: en önde korkuluklara yaslanan sağdaki full siyah köpek baz alındı. korkuluklara tutunup arka patilerinin üstüne çıkıyor
+IMG_5581.MOV,tam,3_ve_uzeri,kismi,yukari,sallamiyor,,ayakta,yuruyor,havlama,kulak,0,0,irem: kafası beyaz gövdesi siyah olan köpek baz alındı
+IMG_5582.mov,tam,3_ve_uzeri,kismi,,sallamiyor,dik_one,ayakta,yuruyor,inleme,kuyruk_konum,0,0,
+IMG_5583.mov,tam,1,iyi,,sallamiyor,,ayakta,yuruyor,inleme,"kuyruk_konum,kulak",0,0,irem: arka patilerinin üstüne çıkıyor
+IMG_5584.MOV,tam,3_ve_uzeri,iyi,yukari,sallamiyor,,ayakta,hareketsiz,havlama,kulak,0,0,
+IMG_5585.MOV,tam,3_ve_uzeri,kismi,yukari,sallamiyor,,ayakta,yuruyor,havlama,kulak,0,0,irem: 3. saniyede gelen siyah köpek baz alındı.
+IMG_5587.mov,tam,3_ve_uzeri,kismi,notr,salliyor,,ayakta,yuruyor,inleme,kulak,0,0,irem: beyaz köpek baz alındı
+IMG_5588.mov,tam,3_ve_uzeri,kismi,yukari,salliyor,geride_yassi,ayakta,hareketsiz,havlama,,0,0,irem: ortadaki siyah köpek baz alındı
+IMG_5592.mov,tam,3_ve_uzeri,kismi,yukari,salliyor,,ayakta,hareketsiz,havlama,kulak,0,0,irem: ortadaki köpek baz alındı
+dog1.mov,tam,1,kismi,,sallamiyor,,ayakta,kosuyor_oynuyor,yok,"kuyruk_konum,kulak",1,0,irem: 12. saniyeye kadar uzanıyor sonra topu yakalamak için koşuyor
+dog10.mov,tam,1,kismi,yukari,salliyor,geride_yassi,ayakta,hareketsiz,havlama,,0,0,irem: arka patileri üstünde cama doğru ayağa kalkmış birilerine havlıyor
+dog11.mov,tam,1,kismi,,sallamiyor,notr,yatiyor,hareketsiz,yok,kuyruk_konum,1,0,irem: oturup yürüdü sonra tekrar oturup bi şeyler yedi
+dog12.mov,tam,1,iyi,,sallamiyor,,ayakta,hareketsiz,havlama,"kuyruk_konum,kulak",1,0,irem: kulakları hem dik oluyor hem geriye yatık oluyor
+dog13.mov,tam,1,kismi,notr,salliyor,,oturuyor,hareketsiz,yok,kulak,0,0,afra: kadrajda olmayan köpeklerin havlama sesleri var
+dog14.mov,tam,3_ve_uzeri,kotu,yukari,salliyor,,ayakta,yuruyor,yok,kulak,1,0,irem: arka patilerinin üstünde 
+dog2.mov,tam,1,iyi,,salliyor,dik_one,ayakta,yuruyor,inleme,kuyruk_konum,0,0,
+dog3.mov,tam,3_ve_uzeri,iyi,yukari,salliyor,notr,ayakta,hareketsiz,havlama,,0,0,irem: en öndeki siyah köpek baz alındı
+dog4.mov,tam,1,iyi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,0,0,
+dog5.mov,tam,1,iyi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,0,0,
+dog6.mov,tam,1,iyi,,salliyor,notr,yatiyor,hareketsiz,yok,kuyruk_konum,0,0,
+dog7.mov,tam,1,kismi,asagi_bacak_arasi,sallamiyor,dik_one,ayakta,hareketsiz,yok,,0,0,
+dog8.mov,tam,1,iyi,notr,sallamiyor,notr,yatiyor,hareketsiz,yok,,0,0,
+dog9.mov,tam,1,iyi,yukari,salliyor,geride_yassi,ayakta,hareketsiz,havlama,,0,0,
