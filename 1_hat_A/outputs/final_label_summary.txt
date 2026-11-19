@@ -1,0 +1,19 @@
+Nihai etiket seti: 127 video
+{'tam': 127}
+Karar bekleyen (video,soru): 0
+
+[kopek_sayisi] {'3_ve_uzeri': 62, '1': 52, '2': 13}
+
+[gorunurluk] {'iyi': 79, 'kismi': 40, 'kotu': 8}
+
+[kuyruk_konum] {'yukari': 54, 'notr': 37, '': 29, 'asagi_bacak_arasi': 5, 'gorunmuyor': 2}
+
+[kuyruk_hareket] {'sallamiyor': 65, 'salliyor': 59, 'gorunmuyor': 3}
+
+[kulak] {'notr': 65, '': 42, 'dik_one': 12, 'geride_yassi': 8}
+
+[durus] {'ayakta': 86, 'yatiyor': 34, 'oturuyor': 5, 'sirtustu': 2}
+
+[hareket] {'hareketsiz': 73, 'yuruyor': 37, 'kosuyor_oynuyor': 17}
+
+[ses] {'yok': 85, 'havlama': 35, 'inleme': 6, 'hirlama': 1}

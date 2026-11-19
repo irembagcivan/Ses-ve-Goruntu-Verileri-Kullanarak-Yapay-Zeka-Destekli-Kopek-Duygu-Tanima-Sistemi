@@ -1,0 +1,540 @@
+<!doctype html><html lang="tr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Proje değerlendirmesi</title><style>*{box-sizing:border-box}body{margin:0;background:#101815;color:#eff5ed;font:17px system-ui;line-height:1.75}main{max-width:1100px;margin:auto;padding:30px 25px}h1,h2,h3,a{color:#b6ef83}h1{font-size:34px}h2{margin-top:40px}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid #3c5140;padding:12px;text-align:left;vertical-align:top}pre{overflow:auto;background:#1c2c22;padding:18px;border-radius:8px}code{overflow-wrap:anywhere}nav{display:flex;gap:24px;flex-wrap:wrap;padding:18px 0;border-bottom:1px solid #3c5140}blockquote{border-left:3px solid #b6ef83;padding-left:20px;color:#bdcbbd}</style><main><nav><a href="BASLA.html">Proje başlangıcı</a><a href="http://127.0.0.1:8768/analyze">Video ekle ve analiz et</a><a href="http://127.0.0.1:8768/gallery">Galeri</a></nav><h1>Davranış ve ses olaylarından dört duygu yorumu · v2</h1>
+<blockquote><p>V16 güncellemesi (15 Kasım 2026): Dört duygu katmanı artık kural türevli etiketlerle değil, insan duygu etiketleriyle eğitilir. Etiketler iki bağımsız etiketleyiciden ve uzlaşma sonrası oluşturuldu (Cohen kappa 0,553; 125 etiketli video: Relaxed 50, Happy 32, Sad 26, Angry 17; 2 belirsiz video dışarıda). Dosya: results/v14_input_review/emotion_human_labels.csv. Kayıt günü gruplu (3 grup, leave-one-group-out) değerlendirmede macro-F1 yaklaşık 0,40–0,44 (tesadüf yaklaşık 0,25; tüm C değerleri raporlandı): python -m src.evaluation.human_emotion_day_eval, sonuç results/human_emotion_eval/summary.md. Bu bağımsız bir test değildir; üç kayıt grubu vardır ve etiketler kayıt günüyle kısmen karışıktır (ilk günde Angry yok). Görüntü ve ses özellikleri aynı kalmıştır. Aşağıda ve eski belgelerde geçen “kural türevi duygu” ifadeleri V16 öncesi tarihsel durumu anlatır.</p></blockquote>
+
+<p>Yeni video hattı Happy/Mutlu, Sad/Üzgün, Angry/Öfkeli, Relaxed/Rahat için dört
+puan üretir. Görüntüde kuyruk konumu/hareketi, kulak, duruş ve hareket davranış
+başlıkları; seste YAMNet Dog/Bark/Growling/Whimper/Howl/Speech/Music olayları kullanılır.
+Her ses sınıfının ortalaması, en yüksek üç pencerenin ortalaması ve 0.3 üstü pencere
+oranı; ayrıca ses bulunma bayrağı vardır. Bu ses olayları zaten önbellekte çıkarılmıştır.</p>
+<h2>Kaynak ve eğitim</h2>
+<p>Önceki <code>duygu_kural_turevli.csv</code> kural etiketleri, nihai davranış konsensüsüyle
+video adına göre eşlenir. Bunlar bağımsız insan duygu etiketleri değildir. Son
+Excelin indirilmesi başarısız olduğu için son Excel kurallarının birebir uygulandığı
+iddia edilmez. Eski vücut-gerginliği alanı kullanılmaz; eski duygu kuralları ve yeni
+konsensüs farklılaşabilir.</p>
+<p>Yalnız mevcut eğitim bölmesindeki 83 video kullanılır: Mutlu 24, Üzgün 14,
+Öfkeli 19, Rahat 26. En az üç geçerli davranış etiketi gerekir; güvensiz satırlar
+kullanılmaz. Eksik davranış hedefleri sıfır vektörüyle maskelenir. Test videoları
+bu katmanın eğitimine veya hiperparametre seçimine girmez.</p>
+<p>Görüntü, ses ve birleşik olmak üzere üç LogisticRegression modeli;
+C ∈ {0.1, 0.3, 1}, balanced, max_iter=2000. Seçim yalnız eğitimde üç katlı
+StratifiedGroupKFold; grup dosya SHA256. Köpek kimliği/oturum ayrımı değildir.
+Seçim ölçütü kural etiketlerine macro-F1 uyumudur; doğrulanmış duygu başarısı değildir.</p>
+<table>
+<thead>
+<tr>
+<th>Girdi</th>
+<th style="text-align:right">Eğitim içi seçim CV macro-F1 · kural etiketleri</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Görüntü davranışları</td>
+<td style="text-align:right">0.6230</td>
+</tr>
+<tr>
+<td>Ses olayları</td>
+<td style="text-align:right">0.3108</td>
+</tr>
+<tr>
+<td>Davranış + ses</td>
+<td style="text-align:right">0.6618</td>
+</tr>
+</tbody>
+</table>
+<p>Bu değerler nihai test sonucu, bağımsız duygu doğruluğu veya istatistiksel üstünlük
+kanıtı değildir. Özellikle ses modeli zayıftır. İnsan davranış one-hot girdileriyle
+eğitim ve tahmin edilen yumuşak davranış girdileriyle çıkarım arasındaki fark da
+sonucu zayıflatabilir. Önceki 45 videolu sürümle farklı kohortlar doğrudan kıyaslanmaz.</p>
+<h2>Çıkarım ve belirsizlik</h2>
+<p>Köpek tespiti örnek karelerin yarısından azındaysa görüntü duygu girişinden çıkarılır.
+Bu bir kapsama sezgisidir; kuyruk/kulak görünürlüğünü ayrı ölçmez. Belirgin köpek
+vokalizasyonu varsa yalnız ses modeli kullanılır. Konuşma/müzik baskın kayıt veya
+sessizlik, tek başına duygu üretemez. Yeterli görüntü varsa sessiz video yalnız
+kuşkulu görüntü yorumunu verebilir. Çoklu köpeklerde ses bireye atanamaz.</p>
+<p>En yüksek puan 0.5 altında veya ilk iki farkı 0.15 altında ise <strong>Kararsız · öne çıkan</strong>
+ifadesi gösterilir. Hırlama ile Üzgün/Rahat arasında çatışma varsa ayrıca kararsız
+raporlanır. Bu eşikler doğrulanmış kalibrasyon değildir. Hırlama doğrudan Öfkeli
+sınıfına zorlanmaz. Sesin dış veride öğrenilen valans/uyarılma modeli ayrı paneldedir.</p>
+<p>Kullanıcının incelenen 7.26 saniyelik örneğinde köpek 3/15 karede algılanmış;
+YAMNet iki hırlama penceresi bulmuştur. Eski görüntü katmanı Üzgün 0.4020;
+yeni ses yolu Öfkeli 0.3322, Üzgün 0.2615 verir. Bu sonuç <strong>kararsızdır</strong>.
+Aynı videodaki değişim tek başına genelleme başarısı sayılmaz. Eski analiz korunur;
+ayrı kayıt yalnız önbellekteki kanıtlarla yeniden yorumlanmıştır.</p>
+<p>Model <code>configs/demo/four_emotions.json</code>, eğitim/çıkarım <code>src/emotion/behavior_bridge.py</code>;
+çıktı <code>behavior_emotion</code>. Bağımsız duygu doğruluğu ve kalibre güven iddiası yoktur.
+Arayüzde dört kart, kanıt kutuları, düşük görüntü kapsamı ve ses modeli ayrımı vardır.</p>
+<pre><code class="language-sh">python -m src.emotion.behavior_bridge --report results/demo_v13_release/report.json --labels results/v14_input_review/emotion_rules_extracted.csv
+</code></pre>
+<h2>Ekran görüntüsündeki vücut şemasına uyarlama · v3</h2>
+<p>Paylaşılan ekran görüntüsünde video, kuyruk, kulak, duruş, aktivite, vücut ve not
+alanları var. Vücut sınıfları gevşek, gergin, çekingen-kapalı. Bu alanlar önceki CSV
+kopyasında da mevcut. Ekran görüntüsündeki küçük yazılı 127 satır otomatik olarak
+hatasız okunmuş veya son Excel dosyası açılmış sayılmadı. Eğitimde önceki CSV'de
+korunan vücut etiketleri kullanıldı; birebir son Excel eşitliği doğrulanmadı.</p>
+<p><code>src/emotion/body.py</code>, 471 donmuş görüntü özelliğinden ayrı üç sınıflı vücut modeli
+eğitir. Mevcut 93 eğitim videosu; normalizasyon yalnız eğitim katında; dosya SHA256
+gruplu üç katlı seçim; balanced LogisticRegression C=0.01/0.1/1.
+Seçilen C=1; eğitim içi macro-F1 0.4294. Bu test başarısı değildir ve model zayıftır.
+Parametreler ve kaynak uyarıları <code>configs/demo/body_state.json</code> içindedir.</p>
+<p>Dört duygu katmanının görüntü girişine üç vücut puanı eklendi. Eğitimde vücut etiketi,
+çıkarımda yeni vücut modelinin tahminleri kullanılır; bu fark hataya yol açabilir.
+Vücut, eski davranış etiketlerinden öğrenilir; bağımsız duygu etiketi değildir.
+Altı davranış hedefinin eski karşılaştırmaları değiştirilmedi. Vücut ayrı yardımcı
+sonuçtur; görüntü kapsamı düşükse gösterilmez ve duygu kararına katılmaz.</p>
+<p>Bağlantı tarafında başlatıcı servisi ayrı süreç olarak çalıştırır. Arayüz yüklemeden
+önce oturum anahtarını yeniler; sorgu koparsa aynı kayıt için tekrar dener. Son
+kayıt kimliği tarayıcıda tutulur. Sunucu kapanırken sürmekte olan bir analiz sonucu
+oluşmamışsa yeniden başlatmada tamamlanmış sayılmaz; video tekrar yüklenmelidir.</p>
+<hr />
+<h1>Literatüre dayalı model seçimi ve ses duygu modeli · v15</h1>
+<p>14 Kasım 2026. Yerel altı davranış hedefi ve dış veride insan algısı ile etiketli
+iki duygu boyutu ayrı hedeflerdir. Bu sürüm davranıştan duygu kuralı üretmez.</p>
+<h2>Araştırma sonucu ve öneri</h2>
+<p>Tek bir evrensel en iyi model gösterilemiyor; veri, hedef ve hayvan ayrımı değişiyor.
+Büyük ağa geçmenin tek başına yüksek başarı garantisi yok. Mevcut küçük veri için
+önerimiz: donmuş poz/ses temsilleri, eğitim içinde seçilen karar birleşimi ve ayrı
+insan algısı etiketleriyle öğrenilen ses duygu başlığı. Diğer modeller uzman
+karşılaştırmasında kalır; ana ekranda bir önerilen davranış ve bir duygu değerlendirmesi var.</p>
+<p>İncelenen birincil kaynaklar:</p>
+<table>
+<thead>
+<tr>
+<th>Çalışma</th>
+<th>Yöntem / bulgu</th>
+<th>Bizim projeye etkisi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abzaliev ve ark., LREC-COLING 2024</td>
+<td>Wav2Vec2 ile havlama bağlamı ve kimlik görevleri; ön-eğitim yararlı</td>
+<td>Transfer öğrenmesi anlamlı; bağlam başarısı duygu başarısı değildir</td>
+</tr>
+<tr>
+<td>Li ve ark., Interspeech 2025, Dog2vec</td>
+<td>Köpeğe özel HuBERT temsili; havlama türü/tespit görevleri</td>
+<td>Gelecek kodlayıcı adayı; hazır duygu sınıflandırıcısı değil. 1.1 GB/fairseq modeli bu sürümde çalıştırılmadı</td>
+</tr>
+<tr>
+<td>Garcia-Loya ve ark., Pattern Recognition Letters 2025</td>
+<td>Görsel, atalet ve fizyolojik sinyaller; ExtraTrees ve yüksek F1</td>
+<td>Onların sensörleri bizde yok; bildirilen skoru bizim video/ses başarısı gibi alamayız</td>
+</tr>
+<tr>
+<td>Dang ve ark., ACM MM 2025, EmotionalCanines</td>
+<td>Üç sınıflı valence/arousal; eGeMAPS, Whisper, HuBERT, Wav2Vec2 ve klasik referanslar</td>
+<td>Bağımsız insan algısı etiketi kaynağı. Yazarların ayrı köpek test sonuçları kabaca %50–57 düzeyinde; her problemde %95 beklenmemeli</td>
+</tr>
+<tr>
+<td>Baek ve ark., CREMD 2026 ön baskı</td>
+<td>İnsan duygu algısı, bağlam ve etiketleyici uyumu</td>
+<td>İnsan algısı ile gerçek iç durum ayrımı; bağlam ve annotator güvenilirliği önemli</td>
+</tr>
+<tr>
+<td>scikit-learn VotingClassifier belgeleri</td>
+<td>Ağırlıklı yumuşak oy, iyi kalibre üyeler için uygun</td>
+<td>Üye skorları kalibre değil; karışım skoru doğruluk yüzdesi olarak sunulmaz</td>
+</tr>
+</tbody>
+</table>
+<p>Bu tablo sistematik bir yayın-sıklığı sayımı değildir. Görsel transfer CNN/poz,
+ses tarafında MFCC/eGeMAPS ve ön-eğitimli temsiller, klasik sınıflandırıcılar ve
+zamansal ağlar kullanılan yöntem aileleridir. Buradaki seçim mevcut veride yapılan
+deneye dayanır; literatürde kullanılan adı büyük diye bir model etkinleştirilmedi.</p>
+<h2>1. Davranış modellerini karıştırma deneyi</h2>
+<p>Özellikler, altı hedef ve aynı 103 güvenli kamera-tarihli video korundu. V14 ile
+aynı dış günler (60/4/39) ve aynı iç günler kullanıldı. Önceki iç eğitim seçimleriyle
+üyeler oluşturuldu: klasik görüntü, klasik ses, klasik erken birleşim, neural fusion.
+9 sabit karışım reçetesinden biri yalnız iç doğrulama ortalamasıyla seçildi.
+Dış gün skoruna göre ağırlık seçilmedi. Tek tohum, daha önce incelenmiş veri ve
+çok az grup sınırları aynen devam eder.</p>
+<table>
+<thead>
+<tr>
+<th>Aynı 103 video</th>
+<th style="text-align:right">Ortalama dış-kat macro-F1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Önceki klasik birleşik</td>
+<td style="text-align:right">0.346</td>
+</tr>
+<tr>
+<td>Önceki neural fusion</td>
+<td style="text-align:right">0.330</td>
+</tr>
+<tr>
+<td>Yeni karar birleşimi</td>
+<td style="text-align:right">0.370</td>
+</tr>
+</tbody>
+</table>
+<p>Dış günlerde seçilen reçeteler:</p>
+<table>
+<thead>
+<tr>
+<th>Gün</th>
+<th>İç eğitimde seçilen reçete</th>
+<th style="text-align:right">Dış gün macro-F1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-06-18</td>
+<td>visual75_audio25</td>
+<td style="text-align:right">0.343</td>
+</tr>
+<tr>
+<td>2026-06-20</td>
+<td>classical_fusion</td>
+<td style="text-align:right">0.295</td>
+</tr>
+<tr>
+<td>2026-06-22</td>
+<td>visual25_audio75</td>
+<td style="text-align:right">0.350</td>
+</tr>
+</tbody>
+</table>
+<p>Canlı uygulama reçetesi ayrıca, yalnız eski 93 eğitim videosunun üç katlı CV'sinde
+seçildi: <strong>%75 klasik görüntü + %25 klasik ses</strong>. Teste bakıp görev bazında farklı
+ağırlıklar uydurulmadı. Yeni uygulama bu kararı öne çıkarır. Gerekli modalite yoksa
+karışım uydurulmaz; uygun tek modlu ağ kullanılır.</p>
+<p>Bu kazanç keşifseldir; istatistiksel olarak kanıtlanmış genel üstünlük demek değildir.
+Yeni test yoktur. Karışım ağırlıkları kişiye/hayvana doğrulanmış güven düzeyi değildir.</p>
+<h2>2. Gerçek etiketli yeni ses duygu öğrenmesi</h2>
+<p>Kaynak, yazarların EmotionalCanines GitHub sürümü:
+<code>6b73c5fce55fc132e97db6a76899f8594a955f59</code>.
+1.400 WAV ve dört etiket CSV'si alındı. Her WAV'ın LFS nesne SHA256'sı ve boyutu
+pinned sürümdeki işaretçiyle karşılaştırıldı. Veri CC-BY-NC-SA-4.0 olarak yayımlanmış;
+kaynak/attribution lisans dosyası korunur. Ham dış veri Git'e ve paylaşım ZIP'ine eklenmez.</p>
+<p>Etiketler doğrudan yazarların insan algısı CSV'lerinden okunur:</p>
+<ul>
+<li>Valence: Negative / Neutral / Positive → Olumsuz / Nötr / Olumlu.</li>
+<li>Arousal: Low / Medium / High → Düşük / Orta / Yüksek uyarılma.</li>
+</ul>
+<p>Yerel <code>duygu_kural_turevli.csv</code> hiçbir eğitim aşamasında kullanılmadı.
+Bu yeni ses hedefi altı davranış etiketinden türetilmedi. Bununla birlikte kaynak
+etiketler insan algısıdır; hayvanın kesin iç öznel durumunun ölçümü değildir.</p>
+<h3>Kaynak veri denetiminde bulunan sorunlar</h3>
+<p>Ham sürümde 1.400 satır ama 1.395 benzersiz ses hash'i var. İki hash eğitim ile
+test arasında ortak. Çelişkili eğitim hash etiketleri ve tekrarlı eğitim kaydı da var.
+Aynı test sesini eğitime sokmamak için bu kayıtlar karantinaya alındı. Teste dokunarak
+daha kolay örnek seçilmedi; resmi 200 test satırı korundu (199 benzersiz ses).
+Ayrıca yayımlanan gerçek dosyalarda süre 0.064–30.016 saniye; 13 kayıt 10 saniyeden
+uzun. Kağıttaki genel süre tanımını dosya denetimi yerine varsaymadık.</p>
+<p>Temiz eğitim: <strong>1195</strong>; resmi test: <strong>200</strong>. Karantinadaki beş eğitim kaydı: <code>husky_train_00291</code>, <code>husky_train_00572</code>, <code>husky_train_00577</code>, <code>shiba_train_00238</code>, <code>shiba_train_00421</code>.</p>
+<p>Yazarlar test köpeklerinin eğitimden ayrıldığını bildiriyor. Yayımlanan CSV'lerde
+köpek kimlikleri yok; bu kimlik ayrımını bağımsız doğrulayamadık. İç CV grupları
+ses SHA256'sıdır, köpek değildir. Bu yüzden iç CV iyimser olabilir. İki ırkın
+birlikte eğitilmesi de yazarların ırk başına deneyinin birebir tekrarı değildir.</p>
+<h3>Temsil ve eğitim</h3>
+<p>Donmuş YAMNet'in 1024 boyutlu gömmelerinin ortalama ve standart sapması birleştirilir
+(2048 özellik). LR (C=.1), RF (200 ağaç/min leaf=3/balanced), iki başlıklı küçük
+MLP ve LR+MLP eşit oy karşılaştırıldı. MLP: 2048→64/LayerNorm/GELU/Dropout .5→32/
+GELU/Dropout .3→iki üç sınıflı başlık. AdamW .001/.01, grad clip 1, seed 42.
+Ölçekleme ve sınıf ağırlıkları yalnız eğitim katlarından öğrenildi.
+MLP epoch 20/40/80 ve son model, eğitim içindeki 3 stratified-hash CV katında seçildi;
+seçim dosyası test skorları hesaplanmadan yazıldı.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th style="text-align:right">Eğitim CV macro-F1</th>
+<th style="text-align:right">Test ort. macro-F1</th>
+<th style="text-align:right">Duygu yönü doğruluğu</th>
+<th style="text-align:right">Uyarılma doğruluğu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>neural</td>
+<td style="text-align:right">0.451</td>
+<td style="text-align:right">0.469</td>
+<td style="text-align:right">45.5%</td>
+<td style="text-align:right">49.0%</td>
+</tr>
+<tr>
+<td>lr</td>
+<td style="text-align:right">0.409</td>
+<td style="text-align:right">0.432</td>
+<td style="text-align:right">38.5%</td>
+<td style="text-align:right">48.0%</td>
+</tr>
+<tr>
+<td>rf</td>
+<td style="text-align:right">0.458</td>
+<td style="text-align:right">0.477</td>
+<td style="text-align:right">43.0%</td>
+<td style="text-align:right">52.5%</td>
+</tr>
+<tr>
+<td>soft_vote</td>
+<td style="text-align:right">0.420</td>
+<td style="text-align:right">0.453</td>
+<td style="text-align:right">40.5%</td>
+<td style="text-align:right">50.0%</td>
+</tr>
+</tbody>
+</table>
+<p>İki boyutun aynı anda doğru olması (joint accuracy):</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th style="text-align:right">Her iki boyut doğru</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>neural</td>
+<td style="text-align:right">23.5%</td>
+</tr>
+<tr>
+<td>lr</td>
+<td style="text-align:right">17.5%</td>
+</tr>
+<tr>
+<td>rf</td>
+<td style="text-align:right">23.5%</td>
+</tr>
+<tr>
+<td>soft_vote</td>
+<td style="text-align:right">19.0%</td>
+</tr>
+</tbody>
+</table>
+<p>Tek bir genel durum etiketi iki tahmini birlikte içerdiğinden bu oran ayrıca önemlidir. İki ayrı doğruluk yüzdesi genel ruh hâlinin aynı oranda doğru olduğu anlamına gelmez.</p>
+<p>Eğitim CV seçimi <strong>RF</strong>. Testte de bu başlık en yüksek ortalamayı aldı ama seçim
+sebebi test değil eğitim CV'sidir. Puanlar düşük/orta düzeyde; yeni köpeklerde kesin
+ruh hâli bulduğumuz iddia edilmez. Yerel 127 videoda duygu etiketleri olmadığından
+bu veri üzerinde duygu doğruluğu ölçülmedi. Dış ses testini yerel davranış F1'iyle
+veya V14 gün tablosuyla tek tabloda aynı hedefmiş gibi birleştirmeyin.</p>
+<h2>3. Yeni videoda ana sonuç nasıl oluşur?</h2>
+<ol>
+<li>Mevcut köpek/poz, YAMNet ve segmentasyon analizi çalışır.</li>
+<li>Altı davranış hedefinde eğitim CV seçilmiş %75 görüntü/%25 ses kararı öne çıkar.</li>
+<li>Ses duygu modeli için Bark≥.30, Bark&gt;Speech, Music&lt;.50 olan bitişik ses
+yamalarından en fazla yaklaşık 4.3 saniyelik bölüm seçilir. Boşluklar birleştirilmez.</li>
+<li>Bu bölümün YAMNet ortalama/std temsili dış etiketlerle eğitilen RF'ye gider.</li>
+<li>Üst panel örneğin <strong>“Tahmini: Olumlu · yüksek uyarılma”</strong> gösterir. Destek
+sınırlıysa açıkça yazılır; bütün sınıf skorları görünür. Eşikler gösterim/çekimserlik
+tercihidir, kalibrasyon veya doğruluk yüzdesi değildir.</li>
+<li>Görüntü davranışları ayrı kanıt olarak gösterilir; görsel etiketler bu ses duygu
+sınıflandırıcısını eğitmedi. Korku/öfke ayrımı eğitilmedi; valence/arousal'dan bu
+sınıflar kesin etiket gibi üretilmez.</li>
+</ol>
+<p>Ses yoksa veya belirgin havlama bulunmazsa duygu belirlenemedi denir. Sessizliği
+mutlu/nötr diye etiketlemeyiz. Çoklu köpekte ses belli bir bireye atanamaz. Bu başlık
+<strong>sesten insan algısına göre duygulanım aktarımıdır</strong>; senkron görsel+ses etiketleriyle
+uçtan uca eğitilmiş çok modlu duygu sınıflandırıcısı değildir. Tam çok modlu duygu
+hedefi için yerel videolarda bağımsız valence/arousal veya uygun duygu etiketleri gerekir.</p>
+<h2>4. Kaydedilen dosyalar ve komutlar</h2>
+<ul>
+<li><code>src/affect/prepare.py</code>: pinned, TLS doğrulamalı indirme ve LFS hash denetimi.</li>
+<li><code>src/affect/train.py</code>: özellik çıkarımı, sızıntılı/çelişkili eğitim kaydı karantinası,
+eğitim CV ve ayrılmış dış veri testi.</li>
+<li><code>src/affect/predict.py</code>: havlama segmenti, bağımsız öğrenilmiş ses duygu tahmini ve genel özet.</li>
+<li><code>src/evaluation/late_fusion.py</code>: iç eğitim seçilmiş karar karışımı ve gün değerlendirmesi.</li>
+<li><code>results/affect_v15_clean/</code>: eğitilmiş başlıklar, scalers, test sonuçları ve veri denetimi.</li>
+<li><code>results/late_fusion_v15/</code>: ağırlık seçimi, iç/dış katlar, dağıtım reçetesi.</li>
+<li><code>docs/affect_external_results_v15.json</code>, <code>docs/late_fusion_results_v15.json</code>: kodla paylaşılan sonuçlar.</li>
+</ul>
+<pre><code class="language-sh">python -m src.affect.prepare
+python -m src.affect.train --output results/affect_repeat
+python -m src.evaluation.late_fusion --output results/fusion_repeat
+python -m pytest -q
+python -m src.demo.launch
+</code></pre>
+<p>Yeni çıktı klasörü kullanılmalı. Hazır dış veri özellikleri ve model dosyaları paylaşım
+paketine eklenebilir; ham 1.400 ses eklenmez. Dış veri modeli CC-BY-NC-SA kaynağıyla
+birlikte akademik kullanım için belgelenir. Yeni özellik çıkarımı için ham dış veriyi resmi kaynaktan indirmek gerekir.
+Hazır özelliklerle tekrar eğitim: <code>python -m src.affect.train --feature-cache results/affect_v15_clean --output results/affect_repeat</code>.
+Paket kaynak CSV/provenance ve donmuş özellikleri içerir. Yalnız uygulamayı çalıştırmak için indirme gerekmez.</p>
+<h2>5. Birincil kaynaklar</h2>
+<ul>
+<li>Abzaliev et al. (2024), https://aclanthology.org/2024.lrec-main.1432/</li>
+<li>Li et al. (2025), https://www.isca-archive.org/interspeech_2025/li25o_interspeech.pdf</li>
+<li>Dog2vec resmi kod/ağırlık yönlendirmesi: https://github.com/fispresent/dog2vec</li>
+<li>Garcia-Loya et al. (2025), https://doi.org/10.1016/j.patrec.2025.06.018</li>
+<li>Dang et al. (2025), https://doi.org/10.1145/3746027.3758286</li>
+<li>Yazarın tam metni: https://kenzhu2000.github.io/papers/acmmm25-dogemo.pdf</li>
+<li>Pinned veri: https://github.com/tmdang1101/EmotionalCanines/tree/6b73c5fce55fc132e97db6a76899f8594a955f59</li>
+<li>CREMD (2026 ön baskı), https://arxiv.org/abs/2602.15349</li>
+<li>Ağırlıklı oy: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html</li>
+</ul>
+<hr />
+<h1>Arkadaş değerlendirmesi, yeni dosyalar ve gün gruplu doğrulama · v14</h1>
+<p>14 Kasım 2026. Bu belge v13 etiket güncellemesinin ardından değerlendirme protokolünü güçlendirir. Etiket dosyası değişmediği için v13 canlı demo kontrol noktaları korunmuştur; yeni gün gruplu skorlar ayrı değerlendirmedir.</p>
+<h2>Arkadaşının söylediklerini değerlendirme</h2>
+<table>
+<thead>
+<tr>
+<th>Konu</th>
+<th>Değerlendirme / yapılan işlem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hazır tespit, poz, ses ve fusion hattını kullanmak</td>
+<td>Doğru öneri. 127 kaydın özellikleri ve kaynak hash sırası doğrulandı; yeniden piksel/ses çıkarımı gerekmedi.</td>
+</tr>
+<tr>
+<td>Yalnız 97 etiketli video var</td>
+<td>Önceki sürüm için doğruydu. Son konsensüs CSV artık 127 videoyu kapsıyor. 11 güvensiz kayıt dışlanınca v13 eğitiminde 93 kayıt var.</td>
+</tr>
+<tr>
+<td>SHA256 kimlik/oturum sızıntısını önlemez</td>
+<td>Doğru. SHA yalnız birebir içerik kopyalarını yakalar. Kamera günleriyle yeni dış-kat gruplaması eklendi; köpek kimliği sızıntısını tamamen önlediğimiz iddia edilmez.</td>
+</tr>
+<tr>
+<td>25 test dosyası bağımsız değil</td>
+<td>Doğru ve hâlâ geçerli. Aynı videoları yeniden bölmek onları yeni bağımsız test yapmaz.</td>
+</tr>
+<tr>
+<td>Kural türevi duygu döngüsel</td>
+<td>Doğru. İnsan davranış etiketlerinden türetilmiş duygu, bağımsız duygu gerçekliği değildir; bu dosya eğitim veya duygu başarısı hedefi yapılmadı.</td>
+</tr>
+<tr>
+<td>README çelişkili</td>
+<td>Doğru. Yalnız üstüne güncellik notu eklemek yetersiz kalmıştı. README yeniden yazıldı; eski görev kayıtları açıkça tarihsel arşive taşındı.</td>
+</tr>
+<tr>
+<td>Düşük sonuçları üstünlük gibi sunmamak</td>
+<td>Doğru. Yeni gün gruplu sonuçlar ve çoğunluk referansı birlikte gösteriliyor. Kanıtlanmış genel üstünlük iddiası yok.</td>
+</tr>
+<tr>
+<td>Kappa eksik</td>
+<td>Doğru. İki kişinin ayrı, bağımsız, uzlaşma öncesi etiketleri dosyada yok; konsensüsten veya kural etiketinden kappa üretilemez.</td>
+</tr>
+</tbody>
+</table>
+<h2>Gelen iki dosyanın içeriği</h2>
+<p><strong>labels_final kopyası.csv:</strong> 127 satır, altı hedef, konsensüs/kalite bayrakları. Hücre bazında v13 eğitiminde kullandığımız <code>labels_final.csv</code> ile aynı. Oturum, kayıt günü ve iki ayrı etiketleyici sütunları yok. Yeniden eski beş hedefli etiketlere dönülmedi.</p>
+<p><strong>duygu_kural_turevli.csv:</strong> 127 kaydın tamamı <code>KURAL TÜREVLİ - insan duygu etiketi değil</code> kaynağıyla işaretli. 37 Relaxed, 33 Happy, 23 Angry, 22 Sad ve 12 boş duygu var. <code>vucut/aktivite/kuyruk</code> eski şemada. Bu dosyayı v2 insan gerçeği diye birleştirmek etiket kaynağını bozar.</p>
+<p>Aynı isimli davranış alanları bile birebir aynı değil: güvenli kayıtlarda karşılaştırılabilir 116 duruş etiketinin 8’i, 77 kulak etiketinin 14’ü farklı. Örneğin IMG_5370.MOV son insan dosyasında ayakta, kural dosyasında oturuyor. Bunlar bir etiketleyici uyumu/kappa hesabı değil, dosya sürümleri arasındaki farklılıklardır. İnsan konsensüs CSV eğitim kaynağı olarak korundu.</p>
+<h2>Kayıt tarihi denetimi</h2>
+<p>127 video incelendi. 114 kayıtta gömülü kamera creationdate bilgisi, 9 kayıtta yalnız container creation_time, 4 kayıtta tarih yok. 17 videoda kamera ve container günü farklı. Bu nedenle container tarihini doğrudan kayıt günü saymadık; dosya adı ve disk mtime/ctime kullanılmadı.</p>
+<p>Örnek: IMG_5592.mov kamera bilgisinde 22 Haziran, container bilgisinde 1 Temmuz gösteriyor. Kaydedilen metadata yalnız tarih alanlarıdır; konum bilgileri rapora taşınmadı.</p>
+<p>Ana değerlendirmeye yalnız kamera creationdate bulunan ve güvensiz olmayan 103 video alındı. 13 yalnız-container/eksik tarihli kayıt ile 11 güvensiz kayıt bu değerlendirme dışında; galeride kalırlar. Gün dağılımı:</p>
+<table>
+<thead>
+<tr>
+<th>Kamera günü</th>
+<th style="text-align:right">Güvenli video</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-06-18</td>
+<td style="text-align:right">60</td>
+</tr>
+<tr>
+<td>2026-06-20</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td>2026-06-22</td>
+<td style="text-align:right">39</td>
+</tr>
+</tbody>
+</table>
+<p>Bu günler gömülü metadata kanıtıdır; çekim sahibi tarafından doğrulanmış oturum veya köpek kimliği değildir. Aynı köpek birden fazla gün bulunabilir. Güçlü sızıntı önleme için insan onaylı oturum/kimlik eşlemesi hâlâ gerekir.</p>
+<h2>Yeni deney nasıl yapıldı?</h2>
+<p>Dış katlarda bir günün bütün videoları dışarıda tutuldu (3 leave-one-day-out katı). Her dış katın kalan iki günüyle iç leave-one-day-out seçim yapıldı. Sinir ağlarının 20/40/60/80 epoch seçimi ve klasik LR/RF seçimi yalnız iç katlardan yapılır; dış gün metriklerine bakılmaz. Ölçekleme, sınıf ağırlıkları ve imputer yalnız o katın eğitim kayıtlarıyla öğrenilir. Bütün yöntemler aynı 103 video üzerinde dış-kat tahmini üretir.</p>
+<p>Kodlayıcılar ve 1 Hz/ilk 60 sn temsilleri değiştirilmedi. Tohum 42. Ham etiket, kalite, tarih, insan notu, konsensüs, köpek sayısı veya kural duygu etiketi özellik vektörüne katılmadı. Tarih yalnız grup bölmesinde kullanıldı.</p>
+<p>Üç günden biri yalnız 4 güvenli videodur; bazı iç eğitim katları yalnız bu dört videodan oluşur. Bu durum model seçimini çok oynak yapar. Sınıf eksiklikleri ve her katın eğitim/test destekleri raporda açıkça saklanır; sınıfı olmayan eğitim katı için başarı beklenmez. Sabit sınıf listesiyle macro-F1 kullanıldı.</p>
+<h2>Gün gruplu sonuçlar</h2>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th style="text-align:right">Birleştirilmiş dış-kat macro-F1</th>
+<th style="text-align:right">Günlere eşit ağırlıklı macro-F1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>neural_visual</td>
+<td style="text-align:right">0.344</td>
+<td style="text-align:right">0.284</td>
+</tr>
+<tr>
+<td>neural_audio</td>
+<td style="text-align:right">0.296</td>
+<td style="text-align:right">0.232</td>
+</tr>
+<tr>
+<td>neural_fusion</td>
+<td style="text-align:right">0.330</td>
+<td style="text-align:right">0.275</td>
+</tr>
+<tr>
+<td>sequence_cnn</td>
+<td style="text-align:right">0.313</td>
+<td style="text-align:right">0.268</td>
+</tr>
+<tr>
+<td>sequence_gru</td>
+<td style="text-align:right">0.308</td>
+<td style="text-align:right">0.239</td>
+</tr>
+<tr>
+<td>sequence_bigru</td>
+<td style="text-align:right">0.279</td>
+<td style="text-align:right">0.250</td>
+</tr>
+<tr>
+<td>sequence_lstm_lstm_gru</td>
+<td style="text-align:right">0.261</td>
+<td style="text-align:right">0.244</td>
+</tr>
+<tr>
+<td>classical_visual</td>
+<td style="text-align:right">0.344</td>
+<td style="text-align:right">0.297</td>
+</tr>
+<tr>
+<td>classical_audio</td>
+<td style="text-align:right">0.283</td>
+<td style="text-align:right">0.254</td>
+</tr>
+<tr>
+<td>classical_fusion</td>
+<td style="text-align:right">0.346</td>
+<td style="text-align:right">0.318</td>
+</tr>
+<tr>
+<td>majority_baseline</td>
+<td style="text-align:right">0.215</td>
+<td style="text-align:right">0.245</td>
+</tr>
+</tbody>
+</table>
+<p>İlk sütun dışarıda bırakılmış bütün videoların tahminleri birleştirildikten sonraki altı hedef macro-F1 ortalamasıdır. İkinci sütun önce her günün skorunu hesaplar, ardından günlere eşit ağırlık verir. 4 videolu güne büyük günlerle eşit ağırlık vermenin etkisi görünür tutuldu.</p>
+<p>Bu sonuçlar farklı günlere geçişin zor olduğunu gösterir; veri sızıntısının varlığını tek başına kanıtlamaz. V13 dosya bölmesi 23 test videosu, bu değerlendirme 103 dış-kat tahmini içerir; sayısal fark yalnız bölme değişiminin nedensel etkisi veya yöntem kazancı diye sunulamaz. Yalnız üç grup olduğundan güvenilir bir genel üstünlük/istatistiksel anlamlılık iddiası kurulmadı.</p>
+<p><strong>Bağımsız yeni test hâlâ yok.</strong> Bu dosyalar önceki geliştirmede kullanıldı. Doğru isim, geçmiş veri üzerinde gün gruplu yeniden doğrulamadır. Nihai bağımsız test için daha önce hiç incelenmemiş yeni köpek/oturum kayıtları gerekir.</p>
+<h2>Kappa ve oturum eşlemesi için eksik girdiler</h2>
+<p>Kappa için iki kişinin video bazında, uzlaşma öncesi ayrı ham etiket formları gerekir. Aynı konsensüs dosyasının iki kopyasını karşılaştırmak uygun değildir. Kod hazır:</p>
+<pre><code class="language-sh">python -m src.evaluation.annotation_agreement --left etiketleyici_a.csv --right etiketleyici_b.csv --output results/kappa.json
+</code></pre>
+<p>Her ham form <code>video</code> ve altı hedef sütununu içermeli; <code>konsensus_disi/kural/kaynak</code> tabloları reddedilir. Eksik/görünmeyen hücreler hedef bazında çiftlerden çıkarılır; çift sayısı ve ham uyum ayrıca raporlanır. Tek kategori gibi kappa tanımsızlığı sıfırla doldurulmaz. Mevcut proje için kappa hesaplandı denmedi.</p>
+<p>Oturum taslağı: <code>results/recording_day_audit_v14/recording_days.csv</code>. <code>confirmed_session_id</code> ve <code>annotator_confirmed</code> alanları bilinçli olarak boş/false bırakıldı. Bunları çekim bilgisi olan kişi doğrulamalı; mevcut tarih grupları onaylanmış oturum gibi adlandırılmadı.</p>
+<h2>Çıktılar ve tekrar</h2>
+<ul>
+<li>Makine okunur tam dış/İç kat sonuçları: <code>results/day_validation_v14/report.json</code>.</li>
+<li>Kodla birlikte taşınan rapor: <code>docs/day_validation_results_v14.json</code>.</li>
+<li>Metadata ve boş oturum-onay alanları: <code>results/recording_day_audit_v14/recording_days.csv</code>.</li>
+<li>Galeri yeni gün tablosunu eski V13 dosya bölmesinden ayrı gösterir. Video yanındaki çıkarımlar V13 demo modelleridir; gün gruplu dış-kat tahminleri diye sunulmaz.</li>
+<li>Canlı modeller yeniden aynı etiket dosyasıyla gereksiz değiştirilmedi. Yeni kat modelleri yalnız değerlendirme içindir; sonradan dış gün skoruyla en iyi ağırlık seçilip uygulamaya geçirilmedi.</li>
+</ul>
+<pre><code class="language-sh">python -m src.evaluation.day_validation --output results/day_validation_repeat
+python -m pytest -q
+node tests/final_labels_ui_smoke.cjs
+</code></pre>
+<p>Ham videolar yeniden özellik çıkarmak için gerekmedi. Metadata denetimi ilk kez orijinal videolardan alındı; sonraki tekrarlar CSV ve özellik snapshot ile yapılır. İki bağımsız etiket formu ve onaylı oturum eşlemesi geldiğinde kappa/oturum değerlendirmesi ayrıca tamamlanabilir.</p>
+<h2>Sürüm doğrulaması</h2>
+<p>380 Python testi geçti. Gün grupları dış ve iç katlarda ayrık; 103 videonun her biri tam bir dış kat tahmininde yer alıyor. Kaydedilmiş dış-kat sınıf tahminlerinden 11 modelin bütün birleştirilmiş macro-F1 değerleri yeniden hesaplanıp doğrulandı. Galeri durum denetimi gün tablosunu ve 127 video/30 eski etiketsiz/25 tarihsel test filtresini kontrol etti.</p>
+</main></html>

@@ -1,0 +1,18 @@
+Duygu etiketi uyumu (irem - afra), ortak video: 127
+Yüzde uyum: 67.7
+Cohen kappa (belirsiz dahil, 5 seçenek): 0.553
+Cohen kappa (ikisi de 'belirsiz' dememiş 123 video): 0.576
+'belirsiz' sayısı: irem=1, afra=3
+
+Karışıklık (satır=irem, sütun=afra):
+afra      sakin  mutlu  kizgin  uzgun  belirsiz
+irem                                           
+sakin        39      0       0      1         0
+mutlu        14     24       0      4         1
+kizgin        0      0       8      6         1
+uzgun        10      1       1     15         1
+belirsiz      0      0       0      1         0
+
+Dağılım irem: {'mutlu': 43, 'sakin': 40, 'uzgun': 28, 'kizgin': 15, 'belirsiz': 1}
+Dağılım afra: {'sakin': 63, 'uzgun': 27, 'mutlu': 25, 'kizgin': 9, 'belirsiz': 3}
+Güven (irem): {'yuksek': 122, 'orta': 5}  (afra): {'yuksek': 72, 'orta': 53, 'dusuk': 2}

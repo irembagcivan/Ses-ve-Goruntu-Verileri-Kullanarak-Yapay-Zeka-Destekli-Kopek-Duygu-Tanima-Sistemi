@@ -1,0 +1,51 @@
+Klasör: /Users/irembagcivan/Desktop/Internship dataset
+Video sayısı: 127   |   Atlanan dosya: 0
+Toplam boyut: 2.23 GB
+Toplam süre: 23.4 dk | ortalama 11.0 sn | medyan 9.7 | min 0.6 | max 67.8
+Çözünürlük (görünen):
+res
+1080x1920    70
+1920x1080    51
+478x850       5
+1080x1080     1
+Yönelim:
+orientation
+dikey    75
+yatay    52
+FPS:
+fps
+59.97    60
+59.98    25
+30.00    10
+59.96     8
+60.00     3
+59.40     3
+29.99     3
+58.57     2
+29.07     1
+59.93     1
+57.92     1
+59.62     1
+29.97     1
+57.86     1
+59.95     1
+59.45     1
+56.23     1
+56.44     1
+29.95     1
+30.02     1
+30.01     1
+Video codec:
+video_codec
+hevc    116
+h264     11
+Ses kanalı var mı:
+has_audio
+True    127
+Sesi düz görünen (dinleyerek kontrol edilecek): 53 -> ['IMG_5354.MOV', 'IMG_5355.MOV', 'IMG_5356.MOV', 'IMG_5357.MOV', 'IMG_5360.MOV', 'IMG_5363.MOV', 'IMG_5364.MOV', 'IMG_5365.MOV', 'IMG_5367.MOV', 'IMG_5372.MOV', 'IMG_5373.MOV', 'IMG_5374.MOV', 'IMG_5375.MOV', 'IMG_5376.MOV', 'IMG_5377.MOV', 'IMG_5378.MOV', 'IMG_5381.MOV', 'IMG_5382.MOV', 'IMG_5389.MOV', 'IMG_5390.MOV', 'IMG_5391.MOV', 'IMG_5392.MOV', 'IMG_5393.MOV', 'IMG_5394.MOV', 'IMG_5395.MOV', 'IMG_5396.MOV', 'IMG_5397.MOV', 'IMG_5399.MOV', 'IMG_5400.MOV', 'IMG_5401.MOV', 'IMG_5402.MOV', 'IMG_5403.MOV', 'IMG_5404.MOV', 'IMG_5405.MOV', 'IMG_5407.MOV', 'IMG_5408.MOV', 'IMG_5409.MOV', 'IMG_5410.MOV', 'IMG_5412.MOV', 'IMG_5413.MOV', 'IMG_5414.MOV', 'IMG_5415.MOV', 'IMG_5422.MOV', 'IMG_5425.MOV', 'IMG_5426.MOV', 'IMG_5498.MOV', 'IMG_5532.MOV', 'IMG_5560.MOV', 'IMG_5566.MOV', 'dog4.mov', 'dog6.mov', 'dog7.mov', 'dog8.mov']
+Dosya adı gruplarına göre sayı:
+name_prefix
+IMG_    113
+dog      14
+Çekim zamanı (metadata) aralığı: 2026-06-18T14:46:14+0530 -> 2026-07-11T10:26:46.000000Z
+Birebir aynı (yinelenen) dosya: 0

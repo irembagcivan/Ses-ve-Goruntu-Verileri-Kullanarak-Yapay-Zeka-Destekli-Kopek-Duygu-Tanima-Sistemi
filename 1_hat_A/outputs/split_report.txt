@@ -1,0 +1,44 @@
+Toplam video: 127
+Grup boyutları: {'A': 67, 'B': 43, 'C': 17}
+
+[ses3]
+grup      A   B   C  toplam
+ses3                       
+diger     0   6   1       7
+havlama  12  19   4      35
+yok      55  18  12      85
+
+
+[durus3]
+grup      A   B   C  toplam
+durus3                     
+ayakta   42  33  11      86
+diger     3   3   1       7
+yatiyor  22   7   5      34
+
+
+[hareket3]
+grup              A   B   C  toplam
+hareket3                           
+hareketsiz       37  24  12      73
+kosuyor_oynuyor  12   4   1      17
+yuruyor          18  15   4      37
+
+
+[kuyruk2]
+grup         A   B   C  toplam
+kuyruk2                       
+(dışarıda)   1   2   0       3
+sallamiyor  32  22  11      65
+salliyor    34  19   6      59
+
+
+[duygu4]
+grup         A   B  C  toplam
+duygu4                       
+(dışarıda)   2   0  0       2
+Angry        0  12  5      17
+Happy       24   7  1      32
+Relaxed     39   6  5      50
+Sad          2  18  6      26
+

@@ -1,0 +1,88 @@
+<!doctype html><html lang="tr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kurulum ve paylaşım</title><style>*{box-sizing:border-box}body{margin:0;background:#101815;color:#eff5ed;font:17px system-ui;line-height:1.75}main{max-width:1100px;margin:auto;padding:30px 25px}h1,h2,h3,a{color:#b6ef83}h1{font-size:34px}h2{margin-top:40px}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid #3c5140;padding:12px;text-align:left;vertical-align:top}pre{overflow:auto;background:#1c2c22;padding:18px;border-radius:8px}code{overflow-wrap:anywhere}nav{display:flex;gap:24px;flex-wrap:wrap;padding:18px 0;border-bottom:1px solid #3c5140}blockquote{border-left:3px solid #b6ef83;padding-left:20px;color:#bdcbbd}</style><main><nav><a href="BASLA.html">Proje başlangıcı</a><a href="http://127.0.0.1:8768/analyze">Video ekle ve analiz et</a><a href="http://127.0.0.1:8768/gallery">Galeri</a></nav><blockquote>
+<p>Proje belgeleri: Başlangıç sayfasındaki Yöntem ve sonuçlar / Sunum bağlantılarından PDF, DOCX, PPTX, TXT veya MD ekleyebilir, açabilir ve silebilirsin. Dosyalar yerel analiz kayıtlarının altında saklanır; paylaşım paketine veya GitHub’a otomatik eklenmez. Hazır belgelerde Listeden kaldır, kaynak dosyayı değiştirmeden koleksiyondan çıkarır.</p>
+</blockquote>
+<blockquote>
+<p>Bağlantı güncellemesi: START_ANALYSIS servisi başlatıcı penceresinden bağımsız çalıştırır. Bilgisayar yeniden başladığında başlatıcıyı tekrar açın. Video ekleme ekranı güncel oturumu alır, kopan analiz kontrolünü sürdürür ve son kaydı aynı tarayıcıda hatırlar. <code>Yeniden bağlan</code> düğmesi mevcuttur. Yeni vücut tahmini ve dört duygu yorumu için <code>docs/four_emotions_bridge.md</code> dosyasına bakın.</p>
+</blockquote>
+<h1>Arkadaşlar için güncel sürüm · son etiketler v13 / değerlendirme v14</h1>
+<blockquote><p>V16 güncellemesi (15 Kasım 2026): Dört duygu katmanı artık kural türevli etiketlerle değil, insan duygu etiketleriyle eğitilir. Etiketler iki bağımsız etiketleyiciden ve uzlaşma sonrası oluşturuldu (Cohen kappa 0,553; 125 etiketli video: Relaxed 50, Happy 32, Sad 26, Angry 17; 2 belirsiz video dışarıda). Dosya: results/v14_input_review/emotion_human_labels.csv. Kayıt günü gruplu (3 grup, leave-one-group-out) değerlendirmede macro-F1 yaklaşık 0,40–0,44 (tesadüf yaklaşık 0,25; tüm C değerleri raporlandı): python -m src.evaluation.human_emotion_day_eval, sonuç results/human_emotion_eval/summary.md. Bu bağımsız bir test değildir; üç kayıt grubu vardır ve etiketler kayıt günüyle kısmen karışıktır (ilk günde Angry yok). Görüntü ve ses özellikleri aynı kalmıştır. Aşağıda ve eski belgelerde geçen “kural türevi duygu” ifadeleri V16 öncesi tarihsel durumu anlatır.</p></blockquote>
+
+<p>Yeni <a href="docs/review_and_day_validation.md">v14 denetimi</a>, aynı konsensüs dosyasını
+ve 103 videoda üç kamera gününü ayıran yeniden doğrulamayı açıklar. Kural türevi
+duygu dosyası eğitim hedefi değildir. Kappa için iki bağımsız ham etiket formu
+ve doğrulanmış oturumlar için insan onaylı eşleme hâlâ gerekir.</p>
+<p>Son sürüm 127 videoyu altı ayrı hedefle işler: hareket, ses, duruş, kuyruk
+konumu, kuyruk hareketi, kulak. 93 güvenli eğitim videosu vardır. Korunan 25
+test dosyasından 23 tanesi yeni kalite etiketleriyle ölçülebilir. Güvensiz ve
+uzlaşılmayan hedefler maskelenir. Eski beş hedefli sonuçlar güncel sonuç değildir.</p>
+<p>Güncel deney açıklaması: <code>docs/labels_final_update.md</code>. Yeni kontrol noktaları
+<code>results/demo_v13_release/</code> içindedir. Aktif sürüm <code>configs/demo/active_release.json</code>
+ile seçilir. Geçmiş analiz kayıtları otomatik yeniden etiketlenmez; yeni sonuç
+için videoyu yeniden yükleyin.</p>
+<h2>V15 ses duygu ve karar birleşimi</h2>
+<p>Yeni video analizinde tek önerilen karar ve ayrıca ses duygu paneli bulunur.
+Ses modeli dış insan algısı etiketleriyle valence/arousal öğrenir; yerel kural
+CSV'sini kullanmaz. Yerel köpeklerde duygu doğruluğu bilinmiyor. Ham dış veri
+ZIP'te yok; çalıştırma için gerekli başlıklar ve kaynak lisansı var.
+Ayrıntı: docs/literature_and_affect_v15.md.</p>
+<h2>Açılacak dosyalar</h2>
+<p>Ana klasörde <strong>BASLA.html</strong> ile başlayın. <strong>DEGERLENDIRME.html</strong> raporu, <strong>KURULUM.html</strong>
+kurulum rehberini açar. Yeni video analizi için <strong>START_ANALYSIS.command</strong> (Mac)
+veya <strong>START_ANALYSIS.bat</strong> (Windows) çalıştırın; Terminal açık kalsın.
+Güncel sayfa: http://127.0.0.1:8768/start . 8766 eski uygulama olabilir.
+Galeri üstündeki panelden dosya seçilebilir. Ses yoksa görüntü modeli sonuç üretir.</p>
+<h2>Hangi klasör güncel?</h2>
+<p>Bu bilgisayarda güncel kaynak:
+<code>/Users/niluferoden/Documents/Codex/canine-multimodal-emotion</code></p>
+<p><code>Documents/canine-multimodal-emotion</code> ayrı, eski bir Git kopyasıdır. Yeni geliştirmeler
+ve paylaşım paketi <code>Documents/Codex</code> altındaki projeden üretilir. Eski kopyanın
+<code>.venv</code> ortamı hâlen kullanılabilir; eski kodla yeni kodu karıştırmayın.</p>
+<p>GitHub çalışma dalı: <code>codex/multimodal-demo-20261108</code>.
+https://github.com/nilufer-oden/canine-multimodal-emotion/tree/codex/multimodal-demo-20261108
+Depo özeldir; GitHub bağlantısını açacak arkadaşların depoya erişimi olmalıdır.
+Alternatif olarak <code>canine_tam_proje_paketi.zip</code> dosyasını paylaşın.</p>
+<h2>Tam paketle ilk kurulum</h2>
+<p>ZIP'i bütünüyle bir klasöre çıkarın. ZIP içinden program çalıştırmayın.
+Python 3.11 kullanımı mevcut ortamda test edilmiştir. Sanal ortam herkese kendi
+bilgisayarında kurulmalıdır; Mac sanal ortamını Windows'a kopyalamayın.</p>
+<p>Mac / Linux:</p>
+<pre><code class="language-sh">python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements-share.txt
+python -m src.demo.launch --check-only
+python -m src.demo.launch
+</code></pre>
+<p>Windows PowerShell:</p>
+<pre><code class="language-powershell">py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r requirements-share.txt
+.\.venv\Scripts\python.exe -m src.demo.launch --check-only
+.\.venv\Scripts\python.exe -m src.demo.launch
+</code></pre>
+<p>Kurulumdan sonra Mac'te <code>START_ANALYSIS.command</code>, Windows'ta
+<code>START_ANALYSIS.bat</code> kullanılabilir. Tarayıcı otomatik açılır. Açılmazsa:
+http://127.0.0.1:8768</p>
+<p><code>requirements-share.txt</code>, şu anda çalışan temel paket sürümlerini sabitler.
+Tüm geçişli bağımlılıkları içeren platformlar arası bir kilit dosyası değildir.
+Yeni Windows/Linux kurulumu ayrıca doğrulanmalıdır; mevcut gerçek çıkarım testleri
+bu Mac'te yapılmıştır. Root <code>requirements.txt</code> daha genel geliştirme aralıklarıdır;
+paylaşım uygulaması için <code>requirements-share.txt</code> dosyasını tek başına kullanın.</p>
+<h2>Neler dahil?</h2>
+<p>Tam paket kodu, eğitilmiş FusionNet/CNN/GRU/BiGRU ağlarını, normalizasyonları,
+YOLO/RTMPose/YAMNet ve YOLOv8s-seg çalışma ağırlıklarını içerir. Ham kaynak veri seti,
+kişisel yüklenen videolar ve 127 önizlemeli büyük hazır galeri pakete eklenmez.
+Yeni video analizi bu galeriden bağımsız çalışır. Model ağırlıkları GitHub'a
+konmaz; GitHub'dan yalnız kod indiren kişi tam paketteki <code>models</code> ve ilgili
+<code>results/demo_v13_release</code> model dosyalarını da edinmelidir.</p>
+<h2>Yeni videoda segmentasyon</h2>
+<p>Video yükle ve analizi başlat. Köpek pozu, ses olayları ve sekiz davranış modeli
+karşılaştırmasının yanında renkli segmentasyon videosu ve siyah-beyaz maske görünür.
+Her örnek için PNG maskeleri ve zaman damgalı JSON indirilebilir. Maskeler dikdörtgen
+kutulardan türetilmez; ön-eğitimli segmentasyon ağı piksel düzeyinde tahmin eder.</p>
+<p>İlk 60 saniye analiz edilir. Maske videosu en fazla 8 kare/sn ve uzun kenarı
+960 piksel olarak işlenir; indirilen maskeler bu görüntü boyutuna karşılık gelir.
+Kare içindeki köpek numaraları kalıcı birey kimliği değildir. Gerçek maske etiketleri
+olmadığından IoU/Dice başarısı ölçülmemiştir. Segmentasyon mevcut davranış ağlarını
+bu maskelerle yeniden eğitmez; önceki F1 skorları değişmez.</p>
+</main></html>

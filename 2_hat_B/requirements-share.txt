@@ -1,0 +1,17 @@
+# Tested core versions on the current Python 3.11 Mac environment.
+# Install this file by itself for the sharing app; transitive dependencies resolve per platform.
+torch==2.6.0
+torchvision==0.21.0
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.17.1
+scikit-learn==1.9.1
+ultralytics==8.4.189
+opencv-python==5.0.0.93
+opencv-python-headless==4.11.0.86
+deeplabcut==3.0.2
+dlclibrary==0.0.12
+h5py==3.16.0
+imageio-ffmpeg==0.6.0
+PyYAML==6.0.3
+pytest==9.1.1

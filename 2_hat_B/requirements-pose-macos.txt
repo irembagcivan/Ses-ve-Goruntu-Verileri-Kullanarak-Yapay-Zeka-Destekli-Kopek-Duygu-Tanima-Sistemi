@@ -1,0 +1,14 @@
+# Candidate CPU-first / MPS stack for macOS Sonoma arm64, Python 3.11/3.12.
+# Versions have official wheels; actual Mac inference is NOT validated.
+# Separate optional stack; excludes TensorFlow, GUI and audio libraries.
+torch==2.6.0
+torchvision==0.21.0
+deeplabcut==3.0.2
+numpy==1.26.4
+# DLC requires headless OpenCV; Ultralytics requires opencv-python.
+# Pin matching versions; validate cv2 on the target machine (see documentation).
+opencv-python==4.10.0.84
+opencv-python-headless==4.10.0.84
+ultralytics>=8.3,<9
+PyYAML>=6.0.2,<7
+pytest>=8.3,<9

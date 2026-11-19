@@ -1,0 +1,29 @@
+project:
+  name: canine-multimodal-emotion
+  classes: [Happy, Sad, Angry, Relaxed]
+runtime:
+  device: auto  # Future implementation: MPS when available, otherwise CPU.
+  batch_size: 1
+  num_workers: 0
+  seed: 42
+data:
+  root: null  # Set locally; no dataset layout or label mapping assumed.
+  manifest: null
+preprocessing:
+  frame_stride: 5
+  image_size: 640
+  audio_sample_rate: 16000
+models:
+  detection:
+    architecture: yolov8
+    weights: null
+  segmentation:
+    architecture: yolov8-seg
+    weights: null
+  pose:
+    species: dog
+    backend: null
+    weights: null
+    keypoint_schema: null
+  fusion:
+    strategy: null

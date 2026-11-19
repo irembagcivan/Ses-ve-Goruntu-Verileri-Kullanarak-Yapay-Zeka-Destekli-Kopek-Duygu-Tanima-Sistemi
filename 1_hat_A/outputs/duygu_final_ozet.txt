@@ -1,0 +1,3 @@
+Nihai duygu etiketi: 127 video; karar bekleyen: 0
+Durum: {'uyumlu': 86, 'ortak_karar': 39, 'ortak_karar_belirsiz': 2}
+Dağılım (boş=belirsiz/bekleyen): {'Relaxed': 50, 'Happy': 32, 'Sad': 26, 'Angry': 17, '(boş)': 2}
